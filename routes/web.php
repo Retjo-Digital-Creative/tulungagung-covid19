@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home.landing');
+Route::get('/', 'Frontend\MainController@index')->name('frontend.home.landing');
+Route::get('/getDataCovid', 'Frontend\MainController@getData')->name('frontend.getData.covid');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+    Route::get('news', 'Admin\NewsController@index');
 });

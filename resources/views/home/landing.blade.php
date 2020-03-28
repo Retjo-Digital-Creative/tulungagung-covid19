@@ -14,6 +14,9 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png">
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
 </head>
 
 <body>
@@ -137,13 +140,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/medicalcare.svg" alt="about">
+                        <img src="{{ asset('assets/images/medicalcare.svg') }}" alt="about">
                     </div> <!-- about image -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
         <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
+            <img src="{{ asset('assets/images/about-shape-1.svg') }}" alt="shape">
         </div>
     </section>
 
@@ -153,7 +156,7 @@
 
     <section class="about-area pt-70">
         <div class="about-shape-2">
-            <img src="assets/images/about-shape-2.svg" alt="shape">
+            <img src="{{ asset('assets/images/about-shape-2.svg') }}" alt="shape">
         </div>
         <div class="container">
             <div class="row">
@@ -169,7 +172,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-first">
                     <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/medicalreasearch.svg" alt="about">
+                        <img src="{{ asset('assets/images/medicalreasearch.svg') }}" alt="about">
                     </div> <!-- about image -->
                 </div>
             </div> <!-- row -->
@@ -194,13 +197,13 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/socialdistancing.svg" alt="about">
+                        <img src="{{ asset('assets/images/socialdistancing.svg') }}" alt="about">
                     </div> <!-- about image -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
         <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
+            <img src={{ asset('assets/images/about-shape-1.svg') }} alt="shape">
         </div>
     </section>
 
@@ -224,32 +227,21 @@
                             </div> <!-- section title -->
                         </div>
                     </div> <!-- counter content -->
-                    <div class="row no-gutters">
-                        <div class="col-4">
-                            <div class="single-counter counter-color-1 d-flex align-items-center justify-content-center">
-                                <div class="counter-items text-center">
-                                    <span class="count"><span class="counter">300</span></span>
-                                    <p class="text">ODP</p>
-                                </div>
-                            </div> <!-- single counter -->
-                        </div>
-                        <div class="col-4">
-                            <div class="single-counter counter-color-3 d-flex align-items-center justify-content-center">
-                                <div class="counter-items text-center">
-                                    <span class="count"><span class="counter">24</span></span>
-                                    <p class="text">PDP</p>
-                                </div>
-                            </div> <!-- single counter -->
-                        </div>
-                        <div class="col-4">
-                            <div class="single-counter counter-color-2 d-flex align-items-center justify-content-center">
-                                <div class="counter-items text-center">
-                                    <span class="count"><span class="counter">0</span></span>
-                                    <p class="text">Positif</p>
-                                </div>
-                            </div> <!-- single counter -->
-                        </div>
-                    </div> <!-- row -->
+                    <div class="container">
+                        {{-- <div class="table-responsive">
+                          <table id="data-covid" class="table table-bordered">
+                            <thead>
+                              <th>Nama Kecamatan</th>
+                              <th>Jumlah Positif</th>
+                              <th>Jumlah Meninggal</th>
+                              <th>Jumlah Sembuh</th>
+                              <th>Jumlah ODP</th>
+                              <th>Jumlah PDP</th>
+                            </thead>
+                          </table>
+                        </div> --}}
+                        {{ $html->table(['class' => 'table table-striped table-bordered']) }}
+                    </div>
                 </div> <!-- counter wrapper -->
 
             </div> <!-- row -->
@@ -287,8 +279,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/batuk%20kering.png" alt="shape">
-                            <img class="shape-1" src="assets/images/batuk%20kering.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/batuk%20kering.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/batuk%20kering.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -301,8 +293,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sakit%20tenggorokan.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sakit%20tenggorokan.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sakit%20tenggorokan.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sakit%20tenggorokan.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -315,8 +307,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sakit%20kepala.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sakit%20kepala.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sakit%20kepala.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sakit%20kepala.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -743,5 +735,9 @@
     <script src="{{ asset('assets/js/particles.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="//cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
+    {{ $html->scripts() }}
 </body>
 </html>
