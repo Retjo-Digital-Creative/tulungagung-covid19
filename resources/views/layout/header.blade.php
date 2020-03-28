@@ -16,22 +16,22 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">HOME</a>
+                                        <a class="page-scroll" style="color: blue;" href="#home">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">SATGAS COVID-19</a>
+                                        <a class="page-scroll" style="color: blue;" href="#about">SATGAS COVID-19</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#facts">PETA COVID-19</a>
+                                        <a class="page-scroll" style="color: blue;" href="#facts">PETA COVID-19</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#features">GEJALA COVID-19</a>
+                                        <a class="page-scroll" style="color: blue;" href="#features">GEJALA COVID-19</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#team">KONTAK</a>
+                                        <a class="page-scroll" style="color: blue;" href="#team">KONTAK</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#blog">RUJUKAN</a>
+                                        <a class="page-scroll" style="color: blue;" href="#blog">RUJUKAN</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
