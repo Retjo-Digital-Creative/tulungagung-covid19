@@ -13,12 +13,12 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/about1.svg" alt="about">
+                        <img src="{{ asset('assets/images/about1.svg') }}" alt="about">
                     </div> <!-- about image -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
         <div class="about-shape-1">
-            <img src="assets/images/about-shape-1.svg" alt="shape">
+            <img src="{{ asset('assets/images/about-shape-1.svg') }}" alt="shape">
         </div>
     </section>

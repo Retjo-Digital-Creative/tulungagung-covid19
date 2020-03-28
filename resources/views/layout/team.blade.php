@@ -12,7 +12,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="team-image">
-                            <img src="assets/images/team-1.png" alt="Team">
+                            <img src="{{ asset('assets/images/team-1.png') }}" alt="Team">
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
@@ -31,7 +31,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="team-image">
-                            <img src="assets/images/team-2.png" alt="Team">
+                            <img src="{{ asset('assets/images/team-2.png') }}" alt="Team">
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
@@ -50,7 +50,7 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-team text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="team-image">
-                            <img src="assets/images/team-3.png" alt="Team">
+                            <img src="{{ asset('assets/images/team-3.png') }}" alt="Team">
                             <div class="social">
                                 <ul>
                                     <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
