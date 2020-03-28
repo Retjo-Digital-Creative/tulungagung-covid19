@@ -13,7 +13,7 @@
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="blog-image">
-                            <img src="assets/images/blog-1.jpg" alt="blog">
+                            <img src="{{ asset('assets/images/blog-1.jpg') }}" alt="blog">
                         </div>
                         <div class="blog-content">
                             <ul class="meta">
@@ -28,7 +28,7 @@
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="blog-image">
-                            <img src="assets/images/blog-2.jpg" alt="blog">
+                            <img src="{{ asset('assets/images/blog-2.jpg') }}" alt="blog">
                         </div>
                         <div class="blog-content">
                             <ul class="meta">
@@ -43,7 +43,7 @@
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="blog-image">
-                            <img src="assets/images/blog-3.jpg" alt="blog">
+                            <img src="{{ asset('assets/images/blog-3.jpg') }}" alt="blog">
                         </div>
                         <div class="blog-content">
                             <ul class="meta">

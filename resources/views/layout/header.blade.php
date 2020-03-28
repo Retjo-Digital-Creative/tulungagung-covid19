@@ -5,7 +5,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo.png" alt="Logo">
+                                <img src="{{ asset('assets/images/logo.png') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -43,7 +43,7 @@
             </div> <!-- container -->
         </div> <!-- navbar area -->
         
-        <div id="home" class="header-hero bg_cover" style="background-image: url(assets/images/banner-bg.svg)">
+        <div id="home" class="header-hero bg_cover" style="background-image: {{ asset('assets/images/banner-bg.svg') }}">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">

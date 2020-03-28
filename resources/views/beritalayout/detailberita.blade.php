@@ -12,7 +12,7 @@
                 <div class="col-md-8">
                     <div class="content">
                         <div class="blog-image">
-                            <img src="assets/images/blog-1.jpg" alt="" class="img img-thumbnail" style="width: 100%;height: auto;margin: 0 auto;display: block">
+                            <img src="{{ asset('assets/images/blog-1.jpg') }}" alt="" class="img img-thumbnail" style="width: 100%;height: auto;margin: 0 auto;display: block">
                         </div><br>
                         <p style="text-align:justify;"><span style="font-size:12pt;font-family:Arial, sans-serif;">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam. </span><em><span style="font-family:Arial, sans-serif;">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</span></em></p>
                         <p style="text-align:justify;"><span style="font-family:Arial, sans-serif;">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</span></p>

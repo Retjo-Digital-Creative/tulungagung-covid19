@@ -30,8 +30,8 @@
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
                             <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-1.png" alt="author">
+                                <img class="shape" src="{{ asset('assets/images/textimonial-shape.svg') }}" alt="shape">
+                                <img class="author" src="{{ asset('assets/images/author-1.png' }}" alt="author">
                             </div>
                             <div class="author-content media-body">
                                 <h6 class="holder-name">Jenny Deo</h6>
@@ -61,8 +61,8 @@
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
                             <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-2.png" alt="author">
+                                <img class="shape" src="{{ asset('assets/images/textimonial-shape.svg') }}" alt="shape">
+                                <img class="author" src="{{ asset('assets/images/author-2.png') }]" alt="author">
                             </div>
                             <div class="author-content media-body">
                                 <h6 class="holder-name">Marjin Otte</h6>
@@ -92,8 +92,8 @@
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
                             <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-3.png" alt="author">
+                                <img class="shape" src="{{ asset('assets/images/textimonial-shape.svg') }}" alt="shape">
+                                <img class="author" src="{{ asset('assets/images/author-3.png') }}" alt="author">
                             </div>
                             <div class="author-content media-body">
                                 <h6 class="holder-name">David Smith</h6>
@@ -123,8 +123,8 @@
                         </div>
                         <div class="testimonial-author d-flex align-items-center">
                             <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-2.png" alt="author">
+                                <img class="shape" src="{{ asset('assets/images/textimonial-shape.svg') }}" alt="shape">
+                                <img class="author" src="{{ asset('assets/images/author-2.png') }}" alt="author">
                             </div>
                             <div class="author-content media-body">
                                 <h6 class="holder-name">Fajar Siddiq</h6>

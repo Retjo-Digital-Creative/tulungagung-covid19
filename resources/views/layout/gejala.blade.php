@@ -12,8 +12,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/demam.png" alt="shape">
-                            <img class="shape-1" src="assets/images/demam.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/demam.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/demam.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
@@ -26,8 +26,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/batuk%20kering.png" alt="shape">
-                            <img class="shape-1" src="assets/images/batuk%20kering.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/batuk%20kering.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/batuk%20kering.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
@@ -40,8 +40,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sakit%20tenggorokan.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sakit%20tenggorokan.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sakit%20tenggorokan.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sakit%20tenggorokan.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
@@ -54,8 +54,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sakit%20kepala.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sakit%20kepala.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sakit%20kepala.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sakit%20kepala.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
@@ -68,8 +68,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/lemas.png" alt="shape">
-                            <img class="shape-1" src="assets/images/lemas.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/lemas.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/lemas.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
@@ -82,8 +82,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sesak%20nafas.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sesak%20nafas.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sesak%20nafas.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sesak%20nafas.png') }}" alt="shape">
                             
                         </div>
                         <div class="services-content mt-30">
