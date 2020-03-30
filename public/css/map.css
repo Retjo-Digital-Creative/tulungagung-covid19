@@ -1,0 +1,28 @@
+#mapid { height: 600px;width: 100%;max-width: 800px;display: block;margin: auto }
+
+#mapid .kecamatanLabel {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+	translate3d(80px, 819px, 0px) translate(10px, -100px)!important
+}
+#mapid .circle {
+	border-radius: 100%;
+	padding: 5px 7px;
+	display:inline-block;
+	margin: 1px;
+	min-height: 25px;
+	min-width: 25px;
+	color: #fff;
+	position : relative;
+	text-align: center;
+}
+#mapid .blue {
+	background-color: rgba(123,138,235,.9);
+}
+#mapid .orange {
+	background-color: rgba(195,98,45,.9);
+}
+#mapid .red {
+	background-color: rgba(255,83,88,.9);
+}
