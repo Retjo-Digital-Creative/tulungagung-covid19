@@ -25,11 +25,11 @@ class DataCovidRequest extends FormRequest
     {
         return [
             'nama_kecamatan' => 'required',
-            'jumlah_positif' => 'exclude_if:nama_kecamatan,true|integer',
-            'jumlah_meninggal' => 'exclude_if:nama_kecamatan,true|integer',
-            'jumlah_sembuh' => 'exclude_if:nama_kecamatan,true|integer',
-            'jumlah_odp' => 'exclude_if:nama_kecamatan,true|integer',
-            'jumlah_pdp' => 'exclude_if:nama_kecamatan,true|integer'
+            'jumlah_positif' => 'exclude_unless:nama_kecamatan,false|integer',
+            'jumlah_meninggal' => 'exclude_unless:nama_kecamatan,false|integer',
+            'jumlah_sembuh' => 'exclude_unless:nama_kecamatan,false|integer',
+            'jumlah_odp' => 'exclude_unless:nama_kecamatan,false|integer',
+            'jumlah_pdp' => 'exclude_unless:nama_kecamatan,false|integer'
         ];
     }
 

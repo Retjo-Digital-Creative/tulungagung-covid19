@@ -29,7 +29,17 @@
 			</div>
 			<div class="card-body">
 				<div>
-					{{ $html->table() }}
+					<table id="table-data" class="table table-striped">
+						<thead>
+							<th>Nama Kecamatan</th>
+							<th>Jumlah Positif</th>
+							<th>Jumlah Meninggal</th>
+							<th>Jumlah Sembuh</th>
+							<th>Jumlah ODP</th>
+							<th>Jumlah PDP</th>
+							<th width="120">Aksi</th>
+						</thead>
+					</table>
 				</div>
 			</div>
 		</div>
@@ -174,6 +184,7 @@
 					text: 'Data Berhasil ditambahkan'
 				})
 				$('#newDataModal form button').html('Tambah Data')
+				$('#newDataModal').modal('show')
 				$('#table-data').DataTable().ajax.reload();
 			},
 			error: function(xhr) {

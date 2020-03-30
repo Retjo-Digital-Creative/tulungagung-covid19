@@ -22,7 +22,7 @@ class DataCovid extends Controller
     public function index(Request $request)
     {
         if($request->ajax()) {
-            $data = Data::all();
+            $data = Data::latest();
             return DataTables::of($data)->addColumn('action', function($data) {
                 return '<a class="btn btn-xs btn-danger delete" href="javascript:void(0)" data-id="'. $data->id .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="javascript:void(0)" class="btn btn-xs btn-primary edit" data-id="'. $data->id .'"><i class="far fa-edit"></i> Edit</a>';
             })->make(true);
@@ -57,7 +57,7 @@ class DataCovid extends Controller
             'jumlah_meninggal' => $request->jumlah_meninggal ? $request->jumlah_meninggal : 0,
             'jumlah_sembuh' => $request->jumlah_sembuh ? $request->jumlah_sembuh : 0,
             'jumlah_odp' => $request->jumlah_odp ? $request->jumlah_odp : 0,
-            'jumlah_pdp' => $request->jumlah_pdp ? $request->jumlah_positif : 0
+            'jumlah_pdp' => $request->jumlah_pdp ? $request->jumlah_pdp : 0
         ];
 
         $create = Data::create($data);
