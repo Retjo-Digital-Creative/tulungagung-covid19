@@ -16,11 +16,12 @@ class CreateDataCovidTulungagung extends Migration
         Schema::create('data_covid_tulungagung', function (Blueprint $table) {
             $table->id();
             $table->string('nama_kecamatan');
-            $table->integer('jumlah_positif');
-            $table->integer('jumlah_meninggal');
-            $table->integer('jumlah_sembuh');
-            $table->integer('jumlah_odp');
-            $table->integer('jumlah_pdp');
+            $table->integer('jumlah_positif')->nullable()->default(0);
+            $table->integer('jumlah_meninggal')->nullable()->default(0);
+            $table->integer('jumlah_sembuh')->nullable()->default(0);
+            $table->integer('jumlah_odp')->nullable()->default(0);
+            $table->integer('jumlah_pdp')->nullable()->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

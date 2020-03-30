@@ -12,7 +12,18 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/bootstrap.js', 'public/js')
+   .js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .styles([
    		'public/assets/css/*'
-   	], 'public/css/main.css');
+   	], 'public/css/main.css')
+   .styles([
+   		'public/dist/css/adminlte.min.css',
+   		'public/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css',
+   		'public/plugins/fontawesome-free/css/all.min.css',
+   		'public/plugins/icheck-bootstrap/icheck-bootstrap.min.css',
+   		'public/plugins/jqvmap/jqvmap.min.css',
+   		'public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css',
+   		'public/plugins/daterangepicker/daterangepicker.css',
+   		'public/plugins/summernote/summernote-bs4.css'
+   	], 'public/css/admin.css');

@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.6.1/css/buttons.dataTables.min.css">
 </head>
 
 <body>
@@ -88,7 +87,7 @@
             </div> <!-- container -->
         </div> <!-- navbar area -->
 
-        <div id="home" class="header-hero bg_cover" style="background-image: url({{ asset('images/banner-bg.svg') }})">
+        <div id="home" class="header-hero bg_cover" style="background-image: url({{ asset('assets/images/banner-bg.svg') }})">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -228,18 +227,6 @@
                         </div>
                     </div> <!-- counter content -->
                     <div class="container">
-                        {{-- <div class="table-responsive">
-                          <table id="data-covid" class="table table-bordered">
-                            <thead>
-                              <th>Nama Kecamatan</th>
-                              <th>Jumlah Positif</th>
-                              <th>Jumlah Meninggal</th>
-                              <th>Jumlah Sembuh</th>
-                              <th>Jumlah ODP</th>
-                              <th>Jumlah PDP</th>
-                            </thead>
-                          </table>
-                        </div> --}}
                         {{ $html->table(['class' => 'table table-striped table-bordered']) }}
                     </div>
                 </div> <!-- counter wrapper -->
@@ -265,8 +252,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/demam.png" alt="shape">
-                            <img class="shape-1" src="assets/images/demam.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/demam.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/demam.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -321,8 +308,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/lemas.png" alt="shape">
-                            <img class="shape-1" src="assets/images/lemas.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/lemas.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/lemas.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -335,8 +322,8 @@
                 <div class="col-lg-4 col-md-7 col-sm-8">
                     <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                         <div class="services-icon">
-                            <img class="shape" src="assets/images/sesak%20nafas.png" alt="shape">
-                            <img class="shape-1" src="assets/images/sesak%20nafas.png" alt="shape">
+                            <img class="shape" src="{{ asset('assets/images/sesak%20nafas.png') }}" alt="shape">
+                            <img class="shape-1" src="{{ asset('assets/images/sesak%20nafas.png') }}" alt="shape">
 
                         </div>
                         <div class="services-content mt-30">
@@ -737,7 +724,6 @@
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    <script src="//cdn.datatables.net/buttons/1.6.1/js/dataTables.buttons.min.js"></script>
     {{ $html->scripts() }}
 </body>
 </html>

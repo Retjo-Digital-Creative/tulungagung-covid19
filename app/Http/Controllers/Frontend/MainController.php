@@ -31,7 +31,7 @@ class MainController extends Controller
 			['data' => 'jumlah_pdp', 'name' => 'jumlah_pdp', 'title' => 'Jumlah PDP']
 		];
 
-		$html = $this->html->setTableId('table')->columns($columns);
+		$html = $this->html->setTableId('table-data')->columns($columns);
 		return view('home.landing', [
 			'html' => $html
 		]);
