@@ -144,8 +144,22 @@
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-{{ $html->scripts() }}
+
 <script>
+	const table = $('#table-data').DataTable({
+		processing: true,
+		serverSide: true,
+		ajax: '/admin/data',
+		columns: [
+			{ data: 'nama_kecamatan', name: 'nama_kecamatan' },
+			{ data: 'jumlah_positif', name: 'jumlah_positif' },
+			{ data: 'jumlah_meninggal', name: 'jumlah_meninggal' },
+			{ data: 'jumlah_sembuh', name: 'jumlah_sembuh' },
+			{ data: 'jumlah_odp', name: 'jumlah_odp' },
+			{ data: 'jumlah_pdp', name: 'jumlah_pdp' },
+			{ data: 'action', name: 'action' }
+		]
+	});
 	const Toast = Swal.mixin({
 	  toast: true,
 	  position: 'top-end',
