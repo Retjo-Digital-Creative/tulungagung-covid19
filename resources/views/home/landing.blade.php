@@ -14,32 +14,32 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png">
 
     <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
 
     <!--====== Magnific Popup CSS ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
 
     <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
 
     <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/LineIcons.css') }}">
 
     <!--====== Font Awesome CSS ======-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
 
     <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 
     <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
 
     <!--====== Style CSS ======-->
    
 
-    <link rel="stylesheet" href="css/leaflet.css">
-    <link rel="stylesheet" href="css/qgis2web.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/qgis2web.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
@@ -346,7 +346,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">559 ODP, 31 PDP, 1 POSITIF</p>
+                        <p class="text-white mb-3">999 Sembuh, 0 MeninggalF</p>
                     </div>
                     <div class="ml-auto">
                         <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
