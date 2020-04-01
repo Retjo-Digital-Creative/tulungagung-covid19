@@ -42,11 +42,11 @@
 
 
 	let setup = async() => {
-		var mymap = L.map('mapid').setView([-8.0735,111.9164], 12);
+		var mymap = L.map('mapid').setView([-8.0735,111.9164], 11);
 		
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		    maxZoom: 12,
-		    minZoom: 12,
+		    maxZoom: 20,
+		    minZoom: 1,
 		    id: 'mapbox.streets',
 		    accessToken: 'pk.eyJ1IjoiZGVmcmluZHIiLCJhIjoiY2s4ZTN5ZjM0MDFrNzNsdG1tNXk2M2dlMSJ9.YXJM0PTu8PSsCCtYVjJNmw'
 		}).addTo(mymap);
