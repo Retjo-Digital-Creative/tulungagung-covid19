@@ -215,7 +215,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <p class="text-white mb-0">TOTAL POSITIF</p>
-                        <h2 class="mb-0 number-font text-white">1</h2>
+                        <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_positif') }}</h2>
                         <p class="text-white mb-0">ORANG</p>
                     </div>
                     <div class="ml-auto">
@@ -232,7 +232,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">999 Sembuh, 0 Meninggal</p>
+                        <p class="text-white mb-3">{{ $data->sum('jumlah_positif') }} Positif, {{ $data->sum('jumlah_meninggal') }} Meninggal, {{ $data->sum('jumlah_sembuh') }} Sembuh</p>
                     </div>
                     <div class="ml-auto">
                         <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">

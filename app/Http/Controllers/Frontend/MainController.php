@@ -32,8 +32,10 @@ class MainController extends Controller
 		];
 
 		$html = $this->html->setTableId('table-data')->columns($columns);
+		$data = Data::latest()->get();
 		return view('home.landing', [
 			'html' => $html,
+			'data' => $data
 		]);
 	}
 }
