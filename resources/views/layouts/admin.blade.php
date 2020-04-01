@@ -92,6 +92,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('admin.data.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Data COVID-19
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

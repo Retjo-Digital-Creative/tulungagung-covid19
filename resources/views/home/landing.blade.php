@@ -227,7 +227,18 @@
                         </div>
                     </div> <!-- counter content -->
                     <div class="container">
-                        {{ $html->table(['class' => 'table table-striped table-bordered']) }}
+                        <div class="table-responsive">
+                            <table id="table-data" class="table table-striped">
+                                <thead>
+                                    <th>Nama Kecamatan</th>
+                                    <th>Jumlah Positif</th>
+                                    <th>Jumlah Meninggal</th>
+                                    <th>Jumlah Sembuh</th>
+                                    <th>Jumlah ODP</th>
+                                    <th>Jumlah PDP</th>
+                                </thead>
+                            </table>
+                        </div>         
                     </div>
                 </div> <!-- counter wrapper -->
 

@@ -28,7 +28,7 @@
 				<a href="/tambah" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-add"></i> Tambah Data</a>
 			</div>
 			<div class="card-body">
-				<div>
+				<div class="table-responsive">
 					<table id="table-data" class="table table-striped">
 						<thead>
 							<th>Nama Kecamatan</th>

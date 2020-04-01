@@ -19,7 +19,7 @@ class MainController extends Controller
 	public function index(Request $request)
 	{
 		if($request->ajax()) {
-			$data = Data::all();
+			$data = Data::latest();
     		return datatables()->of($data)->make(true);
 		}
 		$columns = [
@@ -32,8 +32,9 @@ class MainController extends Controller
 		];
 
 		$html = $this->html->setTableId('table-data')->columns($columns);
+		$data = Data::latest();
 		return view('home.landing', [
-			'html' => $html
+			'html' => $html,
 		]);
 	}
 }
