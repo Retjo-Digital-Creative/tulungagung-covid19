@@ -105,16 +105,16 @@
                                         <a class="page-scroll" href="#home">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#about">SATGAS COVID-19</a>
+                                        <a class="page-scroll" href="#table">PETA COVID-19</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#table">PETA COVID-19</a>
+                                        <a class="page-scroll" href="#cegah">PENCEGAHAN COVID-19</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#features">GEJALA COVID-19</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#rujukan">RUJUKAN</a>
+                                        <a class="page-scroll" href="#berita">BERITA</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact">KONTAK</a>
@@ -160,121 +160,6 @@
 
     <!--====== HEADER PART ENDS ======-->
 
-    <!--====== BRAMD PART START ======-->
-
-
-    <!--====== BRAMD PART ENDS ======-->
-
-    
-
-
-    <!--====== ABOUT PART START ======-->
-
-    <section id="about" class="about-area pt-70">
-        <h1 class="text-center"> Satgas Covid19 </h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title"><span>Membantu Masyrakat</span> Tulungagung<span></h3>
-                        </div> <!-- section title -->
-                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod
-                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                            est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                        <!-- <a href="#" class="main-btn">Try it Free</a> -->
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
-                        data-wow-delay="0.5s">
-                        <img src="{{ asset('assets/images/medicalcare.svg') }}" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="about-shape-1">
-            <img src="{{ asset('assets/images/about-shape-1.svg') }}" alt="shape">
-        </div>
-    </section>
-
-    <!--====== ABOUT PART ENDS ======-->
-
-    <!--====== ABOUT PART START ======-->
-
-    <section class="about-area pt-70">
-        <div class="about-shape-2">
-            <img src="{{ asset('assets/images/about-shape-2.svg') }}" alt="shape">
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 order-lg-last">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h4s class="title"><span>Mengarahkan masyarakat</span> Tulungagung</h4s>
-                        </div> <!-- section title -->
-                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod
-                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                            est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                        <!-- <a href="#" class="main-btn">Try it Free</a> -->
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
-                        data-wow-delay="0.5s">
-                        <img src="{{ asset('assets/images/medicalreasearch.svg') }}" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-
-    <!--====== ABOUT PART START ======-->
-
-    <section class="about-area pt-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-content mt-50 wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="section-title">
-                            <div class="line"></div>
-                            <h3 class="title"><span>Menjaga masyarakat</span> Tulungagung</h3>
-                        </div> <!-- section title -->
-                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod
-                            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                            est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
-                        <!-- <a href="#" class="main-btn">Try it Free</a> -->
-                    </div> <!-- about content -->
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-image text-center mt-50 wow fadeInRightBig" data-wow-duration="1s"
-                        data-wow-delay="0.5s">
-                        <img src="{{ asset('assets/images/socialdistancing.svg') }}" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="about-shape-1">
-            <img src="{{ asset('assets/images/about-shape-1.svg') }}" alt="shape">
-        </div>
-    </section>
-
-    <!--====== ABOUT PART ENDS ======-->
-
-
-    <!--====== ABOUT PART ENDS ======-->
-
-    <!--====== VIDEO COUNTER PART START ======-->
-
-
-
-    <!--====== VIDEO COUNTER PART ENDS ======-->
 
     <!-- table -->
     <section id="table" class="pt-70">
@@ -347,7 +232,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">999 Sembuh, 0 Meninggal, 10 Positif</p>
+                        <p class="text-white mb-3">999 Sembuh, 0 Meninggal</p>
                     </div>
                     <div class="ml-auto">
                         <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
@@ -594,7 +479,7 @@
 
     <!--====== BLOG PART START ======-->
 
-    <section id="rujukan" class="blog-area pt-120">
+    <section id="berita" class="blog-area pt-120">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -708,160 +593,6 @@
 
     <!--====== TEAM PART ENDS ======-->
     
-    <!--====== TESTIMONIAL PART START ======-->
-
-    <section id="news" class="testimonial-area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5">
-                    <div class="section-title text-center pb-40">
-                        <div class="line m-auto"></div>
-                        <h3 class="title">Users sharing<span> their experience</span></h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row testimonial-active wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.8s">
-                <div class="col-lg-4">
-                    <div class="single-testimonial">
-                        <div class="testimonial-review d-flex align-items-center justify-content-between">
-                            <div class="quota">
-                                <i class="lni-quotation"></i>
-                            </div>
-                            <div class="star">
-                                <ul>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
-                                tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam
-                                nonu.</p>
-                        </div>
-                        <div class="testimonial-author d-flex align-items-center">
-                            <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-1.png" alt="author">
-                            </div>
-                            <div class="author-content media-body">
-                                <h6 class="holder-name">Jenny Deo</h6>
-                                <p class="text">CEO, SpaceX</p>
-                            </div>
-                        </div>
-                    </div> <!-- single testimonial -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-testimonial">
-                        <div class="testimonial-review d-flex align-items-center justify-content-between">
-                            <div class="quota">
-                                <i class="lni-quotation"></i>
-                            </div>
-                            <div class="star">
-                                <ul>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
-                                tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam
-                                nonu.</p>
-                        </div>
-                        <div class="testimonial-author d-flex align-items-center">
-                            <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-2.png" alt="author">
-                            </div>
-                            <div class="author-content media-body">
-                                <h6 class="holder-name">Marjin Otte</h6>
-                                <p class="text">UX Specialist, Yoast</p>
-                            </div>
-                        </div>
-                    </div> <!-- single testimonial -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-testimonial">
-                        <div class="testimonial-review d-flex align-items-center justify-content-between">
-                            <div class="quota">
-                                <i class="lni-quotation"></i>
-                            </div>
-                            <div class="star">
-                                <ul>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
-                                tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam
-                                nonu.</p>
-                        </div>
-                        <div class="testimonial-author d-flex align-items-center">
-                            <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-3.png" alt="author">
-                            </div>
-                            <div class="author-content media-body">
-                                <h6 class="holder-name">David Smith</h6>
-                                <p class="text">CTO, Alphabet</p>
-                            </div>
-                        </div>
-                    </div> <!-- single testimonial -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="single-testimonial">
-                        <div class="testimonial-review d-flex align-items-center justify-content-between">
-                            <div class="quota">
-                                <i class="lni-quotation"></i>
-                            </div>
-                            <div class="star">
-                                <ul>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                    <li><i class="lni-star-filled"></i></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="testimonial-text">
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod
-                                tempor invidunt labore.Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam
-                                nonu.</p>
-                        </div>
-                        <div class="testimonial-author d-flex align-items-center">
-                            <div class="author-image">
-                                <img class="shape" src="assets/images/textimonial-shape.svg" alt="shape">
-                                <img class="author" src="assets/images/author-2.png" alt="author">
-                            </div>
-                            <div class="author-content media-body">
-                                <h6 class="holder-name">Fajar Siddiq</h6>
-                                <p class="text">COO, MakerFlix</p>
-                            </div>
-                        </div>
-                    </div> <!-- single testimonial -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== TESTIMONIAL PART ENDS ======-->
-
-
-
-
     <!--====== FOOTER PART START ======-->
 
     <footer id="footer" class="footer-area pt-120">
@@ -870,15 +601,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-45">
-                            <h2 class="subscribe-title">Subscribe Our Newsletter <span>get reguler updates</span></h2>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="subscribe-form mt-50">
-                            <form action="#">
-                                <input type="text" placeholder="Enter eamil">
-                                <button class="main-btn">Subscribe</button>
-                            </form>
+                            <h2 class="subscribe-title">Ikuti Terus Perkembangan Covid-19 di<span>covid19.tulungagung.go.id</span></h2>
                         </div>
                     </div>
                 </div> <!-- row -->
@@ -890,8 +613,7 @@
                             <a class="logo" href="#">
                                 <img src="assets/images/logo.png" alt="logo">
                             </a>
-                            <p class="text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy
-                                eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
+                            <p class="text">&#169; Dinas Kominfo Kabupaten Tulungagung</p>
                             <ul class="social">
                                 <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
                                 <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
@@ -900,56 +622,14 @@
                             </ul>
                         </div> <!-- footer about -->
                     </div>
-                    <div class="col-lg-5 col-md-7 col-sm-7">
-                        <div class="footer-link d-flex mt-50 justify-content-md-between">
-                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                                <div class="footer-title">
-                                    <h4 class="title">Quick Link</h4>
-                                </div>
-                                <ul class="link">
-                                    <li><a href="#">Road Map</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Refund Policy</a></li>
-                                    <li><a href="#">Terms of Service</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                </ul>
-                            </div> <!-- footer wrapper -->
-                            <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                                <div class="footer-title">
-                                    <h4 class="title">Resources</h4>
-                                </div>
-                                <ul class="link">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Page</a></li>
-                                    <li><a href="#">Portfolio</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div> <!-- footer wrapper -->
-                        </div> <!-- footer link -->
-                    </div>
-                    <div class="col-lg-3 col-md-5 col-sm-5">
-                        <div class="footer-contact mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                            <div class="footer-title">
-                                <h4 class="title">Contact Us</h4>
-                            </div>
-                            <ul class="contact">
-                                <li>+809272561823</li>
-                                <li>info@gmail.com</li>
-                                <li>www.yourweb.com</li>
-                                <li>123 Stree New York City , United <br> States Of America 750.</li>
-                            </ul>
-                        </div> <!-- footer contact -->
-                    </div>
-                </div> <!-- row -->
             </div> <!-- footer widget -->
             <div class="footer-copyright">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright d-sm-flex justify-content-between">
                             <div class="copyright-content">
-                                <p class="text">Designed and Developed by <a href="https://uideck.com/"
-                                        rel="nofollow">UIdeck</a></p>
+                                <p class="text">Powered by <a href="https://pedulicorona.com/"
+                                        rel="nofollow">Peduli Corona</a></p>
                             </div> <!-- copyright content -->
                         </div> <!-- copyright -->
                     </div>
