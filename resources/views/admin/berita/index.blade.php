@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @push('style')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.css">
 @endpush
 
 @section('content')
@@ -26,19 +26,18 @@
 		<div class="card">
 			<div class="card-header">
 				<h2 class="float-left">Daftar Berita Terbaru</h2>
-				<a href="{{ route('admin.berita.tambah') }}" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-add"></i> Tambah Data</a>
+				<a href="{{ route('admin.berita.tambah') }}" class="btn btn-success float-right"><i class="fas fa-plus"></i> Tambah Data</a>
 			</div>
 			<div class="card-body">
-				<div class="table-responsive">
-					<table id="news-table" class="table table-striped">
-						<thead>
-							<th>Judul Berita</th>
-							<th>Pembuat</th>
-							<th>Kategori</th>
-							<th>Tanggal Terbit</th>
-						</thead>
-					</table>
-				</div>
+				<table id="news-table" class="table table-striped">
+					<thead>
+						<th>Judul Berita</th>
+						<th>Pembuat</th>
+						<th>Kategori</th>
+						<th>Tanggal Terbit</th>
+						<th>Aksi</th>
+					</thead>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -46,19 +45,20 @@
 @endsection
 
 @push('script')
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script>
 	const table = $('#news-table').DataTable({
 		processing: true,
 		serverSide: true,
 		ajax: '/admin/berita',
+		responsive: true,
 		columns : [
 			{ data: 'title', name: 'title' },
-			{ data: 'author', name: 'author.name' },
-			{ data: 'category', name: 'category.title' },
-			{ data: 'published_at', name: 'published_at' }
+			{ data: 'author', name: 'author' },
+			{ data: 'category', name: 'category' },
+			{ data: 'published_at', name: 'published_at' },
+			{ data: 'action', name: 'action', orderable: false, searchable: false }
 		]
 	})
 </script>

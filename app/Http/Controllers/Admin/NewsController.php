@@ -36,8 +36,8 @@ class NewsController extends Controller
     public function adminIndex(Request $request)
     {
         if($request->ajax()) {
-            $data = Berita::with(['category', 'author'])->with('author')->latest();
-            return DataTables::eloquent($data)
+            $data = Berita::with(['category', 'author'])->latest()->get();
+            return datatables()->of($data)
             ->addColumn('action', function($data) {
                 return '<a class="btn btn-xs btn-danger delete" href="'. route('admin.berita.delete', $data->id) .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="#" class="btn btn-xs btn-primary edit"><i class="far fa-edit"></i> Edit</a>';
             })

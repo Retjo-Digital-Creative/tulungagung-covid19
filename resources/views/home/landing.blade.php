@@ -43,6 +43,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
 
     <!-- dependcies map js -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -346,7 +347,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">999 Sembuh, 0 MeninggalF</p>
+                        <p class="text-white mb-3">999 Sembuh, 0 Meninggal, 10 Positif</p>
                     </div>
                     <div class="ml-auto">
                         <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
@@ -997,7 +998,42 @@
 
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-    {{ $html->scripts() }}
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $('#table-data').DataTable({
+            processing: true,
+            serverSide: true,
+            responsive: true,
+            ajax: '/',
+            columns: [
+                {
+                    data: 'nama_kecamatan',
+                    name: 'nama_kecamatan'
+                },
+                {
+                    data: 'jumlah_positif',
+                    name: 'jumlah_positif'
+                },
+                {
+                    data: 'jumlah_meninggal',
+                    name: 'jumlah_meninggal'
+                },
+                {
+                    data: 'jumlah_sembuh',
+                    name: 'jumlah_sembuh'
+                },
+                {
+                    data: 'jumlah_odp',
+                    name: 'jumlah_odp'
+                },
+                {
+                    data: 'jumlah_pdp',
+                    name: 'jumlah_pdp'
+                }
+            ]
+        })
+    </script>
 </body>
 
 </html>

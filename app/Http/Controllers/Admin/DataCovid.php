@@ -22,8 +22,8 @@ class DataCovid extends Controller
     public function index(Request $request)
     {
         if($request->ajax()) {
-            $data = Data::latest();
-            return DataTables::of($data)->addColumn('action', function($data) {
+            $data = Data::latest()->get();
+            return datatables()->of($data)->addColumn('action', function($data) {
                 return '<a class="btn btn-xs btn-danger delete" href="javascript:void(0)" data-id="'. $data->id .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="javascript:void(0)" class="btn btn-xs btn-primary edit" data-id="'. $data->id .'"><i class="far fa-edit"></i> Edit</a>';
             })->make(true);
         }

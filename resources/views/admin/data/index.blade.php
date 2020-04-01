@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @push('style')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.css">
 @endpush
 @section('content')
 <div class="content-header">
@@ -25,7 +25,7 @@
 		<div class="card">
 			<div class="card-header">
 				<h2 class="float-left">Table Data</h2>
-				<a href="/tambah" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-add"></i> Tambah Data</a>
+				<a href="/tambah" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -141,8 +141,7 @@
 </div>
 @endsection
 @push('script')
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <script>
@@ -150,6 +149,7 @@
 		processing: true,
 		serverSide: true,
 		ajax: '/admin/data',
+		responsive: true,
 		columns: [
 			{ data: 'nama_kecamatan', name: 'nama_kecamatan' },
 			{ data: 'jumlah_positif', name: 'jumlah_positif' },
@@ -157,7 +157,7 @@
 			{ data: 'jumlah_sembuh', name: 'jumlah_sembuh' },
 			{ data: 'jumlah_odp', name: 'jumlah_odp' },
 			{ data: 'jumlah_pdp', name: 'jumlah_pdp' },
-			{ data: 'action', name: 'action' }
+			{ data: 'action', name: 'action', orderable: false, searchable: false }
 		]
 	});
 	const Toast = Swal.mixin({
