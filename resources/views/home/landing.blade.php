@@ -181,7 +181,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <p class="text-white mb-0">TOTAL ODP</p>
-                        <h2 class="mb-0 text-white">559</h2>
+                        <h2 class="mb-0 text-white">{{ $data->sum('jumlah_odp') }}</h2>
                         <p class="text-white mb-0">ORANG</p>
                     </div>
                     <div class="ml-auto">
@@ -198,7 +198,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <p class="text-white mb-0">TOTAL PDP</p>
-                        <h2 class="mb-0 number-font text-white">31</h2>
+                        <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_pdp') }}</h2>
                         <p class="text-white mb-0">ORANG</p>
                     </div>
                     <div class="ml-auto">
