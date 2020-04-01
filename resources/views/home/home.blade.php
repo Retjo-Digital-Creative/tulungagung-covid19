@@ -279,6 +279,7 @@
     <section id="table" class="pt-70">
         <div class="container">
             <div class="row justify-content-center">
+<<<<<<< HEAD
                 <div class="col-lg-10">
                     <div class="section-title text-center pb-40">
                         <div class="line m-auto"></div>
@@ -331,6 +332,31 @@
                         <p class="text-white mb-0">TOTAL POSITIF</p>
                         <h2 class="mb-0 number-font text-white">1</h2>
                         <p class="text-white mb-0">ORANG</p>
+=======
+                <div class="counter-wrapper mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                    <div class="counter-content">
+                        <div class="col-lg-10">
+                            <div class="section-title text-center pb-40">
+                                <div class="line m-auto"></div>
+                                <h3 class="title">Peta & Data Sebaran Covid-19 <span></span></h3>
+                                <p class="text-center">Data berikut bersifat sementara dan dapat berubah sewaktu-waktu. </br><strong>*(update terakhir 26/3/2020)</strong></p>
+                            </div> <!-- section title -->
+                        </div>
+                    </div> <!-- counter content -->
+                    <div class="container">
+                        <div class="table-responsive">
+                            <table id="table-data" class="table table-striped">
+                                <thead>
+                                    <th>Nama Kecamatan</th>
+                                    <th>Jumlah Positif</th>
+                                    <th>Jumlah Meninggal</th>
+                                    <th>Jumlah Sembuh</th>
+                                    <th>Jumlah ODP</th>
+                                    <th>Jumlah PDP</th>
+                                </thead>
+                            </table>
+                        </div>         
+>>>>>>> c31317c6e84b5f2a72b24e622a8fffab50126e90
                     </div>
                     <div class="ml-auto">
                         <img src="https://pedulicorona.com/images/icons/mood-sad-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
