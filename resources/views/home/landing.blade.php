@@ -600,7 +600,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="subscribe-content mt-45">
-                            <h2 class="subscribe-title">Ikuti Terus Perkembangan (Covid-19<span>covid19.tulungagung.go.id</span></h2>
+                            <h2 class="subscribe-title">Ikuti Terus Perkembangan Covid-19 di<span>covid19.tulungagung.go.id</span></h2>
                         </div>
                     </div>
                 </div> <!-- row -->
