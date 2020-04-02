@@ -30,7 +30,7 @@
 						<h2 class="float-left">Daftar Berita Terbaru</h2>
 					</div>
 					<div class="col-md-3 mr-auto">
-						<a href="{{ route('admin.berita.tambah') }}" class="btn btn-success btn-sm" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+						<a href="{{ route('admin.berita.tambah') }}" class="btn btn-success btn-sm"><i class="fas fa-plus"></i> Tambah Data</a>
 						<a href="/refresh" id="reload" class="btn btn-primary btn-sm"><i class="fas fa-redo"></i> Reload Table</a>
 					</div>
 				</div>
