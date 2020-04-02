@@ -7,8 +7,18 @@
     <!--====== Title ======-->
     <title>SATGAS SIAGA COVID-19</title>
 
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" name="viewport">
+    <title>SATGAS SIAGA COVID-19 TULUNGAGUNG</title>
+    <meta name="description" content="Live Data & Statistik Penyebaran CoronaVirus (COVID-19) di Kabupaten Tulungagung">
+    <meta name="author" content="Peduli Corona">
+
+    <meta property="og:image" content="{{ asset('/assets/images/thumbnail.png') }}">
+    <meta property="og:title" content="SATGAS SIAGA COVID-19 TULUNGAGUNG" />
+    <meta property="og:description" content="Live Data & Statistik Penyebaran CoronaVirus (COVID-19) di Kabupaten Tulungagung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://covid19.tulungagung.go.id/" />
+    <link rel="canonical" href="https://covid19.tulungagung.go.id/">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/png">
@@ -185,7 +195,7 @@
                         <p class="text-white mb-0">ORANG</p>
                     </div>
                     <div class="ml-auto">
-                        <img src="https://pedulicorona.com/images/icons/mood-happy-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
+                        <img src="https://pedulicorona.com/images/icons/mood-neutral-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
                     </div>
                 </div>
             </div>
@@ -232,7 +242,7 @@
                 <div class="d-flex">
                     <div class="text-white">
                         <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">{{ $data->sum('jumlah_positif') }} Positif, {{ $data->sum('jumlah_meninggal') }} Meninggal, {{ $data->sum('jumlah_sembuh') }} Sembuh</p>
+                        <p class="text-white mb-3">{{ $data->sum('jumlah_positif') }} Positif, {{ $data->sum('jumlah_sembuh') }} Sembuh, {{ $data->sum('jumlah_meninggal') }} Meninggal</p>
                     </div>
                     <div class="ml-auto">
                         <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
@@ -385,7 +395,7 @@
                         </div>
                         <div class="services-content mt-30">
                             <h4 class="services-title"><a href="#">Demam Tinggi</a></h4>
-                            <p class="text">Demam menunjukkan gejala awal corona, demam biasanya mencapai suhu 38
+                            <p class="text">Demam menunjukkan gejala awal COVID-19, demam biasanya mencapai suhu 38
                                 derajat celcius keatas</p>
                             <!-- <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a> -->
                         </div>
@@ -551,7 +561,7 @@
                 <div class="col-lg-5">
                     <div class="section-title text-center pb-30">
                         <div class="line m-auto"></div>
-                        <h3 class="title"><span>Kontak</span> Satgas Covid-19</h3>
+                        <h3 class="title"><span>Call Center </span>Siaga Covid-19</h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -562,9 +572,9 @@
                             <div class="media"><img src="assets/images/profile.svg" alt="Alfan Jauhari"
                                     style="width: 100px; height: 100px; border-radius: 100%;">
                                 <div class="media-body ml-4">
-                                    <h3 class="mt-0 mb-0 font-weight-bold">Satgas1</h3>
+                                    <h3 class="mt-0 mb-0 font-weight-bold">Public Safety Centre (PSC)</h3>
                                     <h5 class=""><a data-v-93cc92b4="" href="tel:0215210411"
-                                            class="font-weight-bold">021-5210-411</a></h5>
+                                            class="font-weight-bold">(0355) 320119</a></h5>
                                 </div>
                             </div>
                         </div>
@@ -576,8 +586,8 @@
                             <div class="media"><img src="assets/images/profile.svg" alt="Muhammad Surya Maulana"
                                     style="width: 100px; height: 100px; border-radius: 100%;">
                                 <div class="media-body ml-4">
-                                    <h3 class="mt-0 mb-0 font-weight-bold">Satgas2</h3>
-                                    <h5 class=""><a href="tel:0215210411" class="font-weight-bold">021-5210-411</a></h5>
+                                    <h3 class="mt-0 mb-0 font-weight-bold">DINAS KESEHATAN</h3>
+                                    <h5 class=""><a href="tel:0215210411" class="font-weight-bold">(0355) 321924</a></h5>
 
                                     <div class="social mt-4">
                                     </div>
