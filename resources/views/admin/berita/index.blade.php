@@ -26,6 +26,9 @@
 		<div class="card">
 			<div class="card-header">
 				<h2 class="float-left">Daftar Berita Terbaru</h2>
+				@if(session('status'))
+				<div class="alert alert-success">{{ session('status') }}</div>
+				@endif
 				<a href="{{ route('admin.berita.tambah') }}" class="btn btn-success float-right"><i class="fas fa-plus"></i> Tambah Data</a>
 			</div>
 			<div class="card-body">

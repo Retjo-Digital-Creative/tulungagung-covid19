@@ -59,7 +59,7 @@
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="berita.html">
-                                <img src="assets/images/logo.png" alt="Logo">
+                                <img src="{{ asset('assets/images/logo-2.png') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -70,10 +70,10 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                                 <ul id="nav" class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="page-scroll font-weight-bold text-dark" href="{{ route('frontend.home.landing') }}">HOME</a>
+                                        <a class="page-scroll font-weight-bold text-dark" style="font-family: 'Poppins', sans-serif;" href="{{ route('frontend.home.landing') }}">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll font-weight-bold text-dark" href="{{ route('frontend.berita.index') }}">BERITA</a>
+                                        <a class="page-scroll font-weight-bold text-dark" style="font-family: 'Poppins', sans-serif;" href="{{ route('frontend.berita.index') }}">BERITA COVID-19</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -88,36 +88,24 @@
     <section id="blog" class="blog-area pt-120">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="section-title pb-35">
                         <div class="line"></div>
-                        <h3 class="title"><span>Berita Terbaru</span></h3>
+                        <h3 class="title"><span>{{ $berita->title }}</span></h3>
                     </div> <!-- section title -->
                 </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                @foreach($news as $new)
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-8">
+                    <div class="content">
                         <div class="blog-image">
-                            <img src="{{ asset('content/uploads/' . $new->image) }}" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">{{ $new->author->name }}</a></li>
-                                <li>{{ $new->published_at }}</li>
-                            </ul>
-                            <a href="#"><p class="text">{{ $new->title }}</p></a>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div> 
-                @endforeach
-            </div> <!-- row -->
+                            <img src="{{ $berita->image }}" alt="{{ $berita->title }}" class="img img-thumbnail" style="width: 100%;height: auto;margin: 0 auto;display: block">
+                        </div><br>
+                        {!! $berita->content !!}
+                    </div>
+                </div>
+            </div>
         </div> <!-- container -->
-        <div class="container text-center">
-            {{ $news->links() }}
-        </div>
     </section>
     
     <!--====== BLOG PART ENDS ======-->
@@ -148,7 +136,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <a class="logo" href="#">
-                                <img src="assets/images/logo.png" alt="logo">
+                                <img src="{{ asset('assets/images/logo-2.png') }}" alt="logo">
                             </a>
                             <p class="text">Lorem ipsum dolor sit amet consetetur sadipscing elitr, sederfs diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam.</p>
                             <ul class="social">
@@ -225,7 +213,6 @@
 
     <!--====== BACK TOP TOP PART ENDS ======-->   
     
-    <!--====== BACK TOP TOP PART ENDS ======-->
     <script src="{{ asset('assets/js/jquery-1.12.4.min.js') }}"></script>
     <script src="{{ asset('assets/js/modernizr-3.7.1.min.js') }}"></script>
 

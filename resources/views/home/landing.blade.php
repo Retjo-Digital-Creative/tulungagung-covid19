@@ -694,7 +694,6 @@
         $('#table-data').DataTable({
             processing: true,
             serverSide: true,
-            responsive: true,
             ajax: '/',
             columns: [
                 {

@@ -27,6 +27,7 @@ class DataCovid extends Controller
                 return '<a class="btn btn-xs btn-danger delete" href="javascript:void(0)" data-id="'. $data->id .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="javascript:void(0)" class="btn btn-xs btn-primary edit" data-id="'. $data->id .'"><i class="far fa-edit"></i> Edit</a>';
             })->make(true);
         }
+
         $columns = [
             ['data' => 'nama_kecamatan', 'name' => 'nama_kecamatan', 'title' => 'Kecamatan'],
             ['data' => 'jumlah_positif', 'name' => 'jumlah_positif', 'title' => 'Jumlah Positif'],
@@ -35,8 +36,6 @@ class DataCovid extends Controller
             ['data' => 'jumlah_odp', 'name' => 'jumlah_odp', 'title' => 'Jumlah ODP'],
             ['data' => 'jumlah_pdp', 'name' => 'jumlah_pdp', 'title' => 'Jumlah PDP'],
         ];
-
-        $html = $this->html->setTableId('table-data')->columns($columns)->addAction();
 
     	return view('admin.data.index', [
             'html' => $html,

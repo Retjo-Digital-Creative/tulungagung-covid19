@@ -24,8 +24,15 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-header">
-				<h2 class="float-left">Table Data</h2>
-				<a href="/tambah" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+				<div class="row">
+					<div class="col-md-10">
+						<h2 class="float-left">Table Data</h2>
+					</div>
+					<div class="col-md-2">
+						<a href="/tambah" class="btn btn-success btn-xs" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+						<a href="/refresh" id="reload" class="btn btn-primary btn-xs"><i class="fas fa-reload"></i> Reload Table</a>
+					</div>
+				</div>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -149,7 +156,6 @@
 		processing: true,
 		serverSide: true,
 		ajax: '/admin/data',
-		responsive: true,
 		columns: [
 			{ data: 'nama_kecamatan', name: 'nama_kecamatan' },
 			{ data: 'jumlah_positif', name: 'jumlah_positif' },
@@ -160,6 +166,11 @@
 			{ data: 'action', name: 'action', orderable: false, searchable: false }
 		]
 	});
+
+	$('#reload').on('click', function(e) {
+		e.preventDefault();
+		$('#table-data').DataTable().ajax.reload()
+	})
 	const Toast = Swal.mixin({
 	  toast: true,
 	  position: 'top-end',

@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('/data', 'Admin\DataCovid@index')->name('admin.data.index');
 	Route::get('/berita', 'Admin\NewsController@adminIndex')->name('admin.berita.index');
 	Route::get('/berita/tambah', 'Admin\NewsController@create')->name('admin.berita.tambah');
+	Route::post('/berita/check-slug', 'Admin\NewsController@checkSlug')->name('admin.berita.checkSlug');
 	Route::post('/berita/store', 'Admin\NewsController@store')->name('admin.berita.store');
 	Route::get('/berita/edit/{id}', 'Admin\NewsController@edit')->name('admin.berita.edit');
 	Route::put('/berita/update/{id}', 'Admin\NewsController@update')->name('admin.berita.update');
@@ -35,4 +36,5 @@ Route::put('/data/update/{id}', 'Admin\DataCovid@updateData')->name('admin.data.
 
 Route::group(['prefix' => 'berita'], function() {
 	Route::get('/', 'Admin\NewsController@index')->name('frontend.berita.index');
+	Route::get('/baca/{berita}', 'Admin\NewsController@show')->name('frontend.berita.show');
 });

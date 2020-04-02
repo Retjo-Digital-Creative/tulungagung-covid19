@@ -124,7 +124,7 @@
   <!-- Footer End -->
 
   <!-- Logout form -->
-  <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: hidden">
+  <form id="logout-form" action="{{ route('logout') }}" method="post" style="visibility: hidden">
     @csrf
     <button type="submit">Logout</button>
   </form>
