@@ -30,7 +30,11 @@ class Berita extends Model
 
     public function getPublishedAtAttribute($value)
     {
-    	return Carbon::parse($value)->diffForHumans();
+    	if(! is_null($value)) {
+            return Carbon::parse($value)->diffForHumans();
+        } else {
+            return $value;
+        }
     }
 
     public function getRouteKeyName()

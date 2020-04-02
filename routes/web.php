@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::post('/berita/store', 'Admin\NewsController@store')->name('admin.berita.store');
 	Route::get('/berita/edit/{id}', 'Admin\NewsController@edit')->name('admin.berita.edit');
 	Route::put('/berita/update/{id}', 'Admin\NewsController@update')->name('admin.berita.update');
-	Route::delete('/berita/delete/{id}', 'Admin\NewsController@delete')->name('admin.berita.delete');
+	Route::delete('/berita/delete/{id}', 'Admin\NewsController@destroy')->name('admin.berita.delete');
 });
 Route::delete('/data/delete/{id}', 'Admin\DataCovid@deleteData')->name('admin.data.delete');
 Route::post('/data/store', 'Admin\DataCovid@newData')->name('admin.data.store');

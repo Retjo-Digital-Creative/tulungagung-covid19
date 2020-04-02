@@ -24,6 +24,7 @@
 			</div>
 			<div class="card-body">
 				<form id="berita-form" action="{{ route('admin.berita.update', $berita->id) }}" method="post" enctype="multipart/form-data">
+					@method('put')
 					@csrf
 				  <div class="form-group">
 				    <label for="judul">Judul</label>
@@ -36,12 +37,7 @@
 				  </div>
 				  <div class="form-group">
 				  	<label for="slug">Slug</label>
-				  	<div class="input-group mb-3">
-						  <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" value="{{ $berita->slug }}">
-						  <div class="input-group-append">
-						    <button id="checkSlug" class="btn btn-outline-info" type="button">Check Slug</button>
-						  </div>
-						</div>
+					  <input type="text" class="form-control @error('slug') is-invalid @enderror" id="slug" name="slug" value="{{ $berita->slug }}">
 						@error('slug')
 				    <small class="form-text text-danger">
 				    	{{ $message }}
