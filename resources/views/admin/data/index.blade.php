@@ -25,12 +25,12 @@
 		<div class="card">
 			<div class="card-header">
 				<div class="row">
-					<div class="col-md-10">
+					<div class="col-md-9">
 						<h2 class="float-left">Table Data</h2>
 					</div>
-					<div class="col-md-2">
-						<a href="/tambah" class="btn btn-success btn-xs" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
-						<a href="/refresh" id="reload" class="btn btn-primary btn-xs"><i class="fas fa-reload"></i> Reload Table</a>
+					<div class="col-md-3 mr-auto">
+						<a href="/tambah" class="btn btn-success btn-sm" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+						<a href="/refresh" id="reload" class="btn btn-primary btn-sm"><i class="fas fa-redo"></i> Reload Table</a>
 					</div>
 				</div>
 			</div>
@@ -51,6 +51,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!-- New data modal -->
 	<div class="modal fade" id="newDataModal" tabindex="-1" role="dialog" aria-labelledby="newDataModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">

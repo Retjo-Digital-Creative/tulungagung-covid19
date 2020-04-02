@@ -28,18 +28,7 @@ class DataCovid extends Controller
             })->make(true);
         }
 
-        $columns = [
-            ['data' => 'nama_kecamatan', 'name' => 'nama_kecamatan', 'title' => 'Kecamatan'],
-            ['data' => 'jumlah_positif', 'name' => 'jumlah_positif', 'title' => 'Jumlah Positif'],
-            ['data' => 'jumlah_meninggal', 'name' => 'jumlah_meninggal', 'title' => 'Jumlah Meninggal'],
-            ['data' => 'jumlah_sembuh', 'name' => 'jumlah_sembuh', 'title' => 'Jumlah Sembuh'],
-            ['data' => 'jumlah_odp', 'name' => 'jumlah_odp', 'title' => 'Jumlah ODP'],
-            ['data' => 'jumlah_pdp', 'name' => 'jumlah_pdp', 'title' => 'Jumlah PDP'],
-        ];
-
-    	return view('admin.data.index', [
-            'html' => $html,
-        ]);
+    	return view('admin.data.index');
     }
 
     /**

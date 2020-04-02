@@ -100,6 +100,29 @@
               </p>
             </a>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>
+                Berita
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.berita.index') }}" class="nav-link">
+                  <i class="far fa-newspaper nav-icon"></i>
+                  <p>List Berita</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.berita.tambah') }}" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Tambah Berita</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

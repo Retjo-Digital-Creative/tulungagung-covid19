@@ -64,7 +64,7 @@ class NewsController extends Controller
             $data = Berita::with(['category', 'author'])->latest()->get();
             return datatables()->of($data)
             ->addColumn('action', function($data) {
-                return '<a class="btn btn-xs btn-danger delete" href="'. route('admin.berita.delete', $data->id) .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="#" class="btn btn-xs btn-primary edit"><i class="far fa-edit"></i> Edit</a>';
+                return '<a class="btn btn-xs btn-danger delete" href="'. route('admin.berita.delete', $data->id) .'"><i class="far fa-trash-alt"></i> Delete</a> | <a href="'. route('admin.berita.edit', $data->id) .'" class="btn btn-xs btn-primary edit"><i class="far fa-edit"></i> Edit</a>';
             })
             ->editColumn('title', function($data) {
                 return Str::limit($data->title, 30);
@@ -161,6 +161,68 @@ class NewsController extends Controller
             } else {
                 return redirect('/admin/berita/tambah')->withErrors($validator)->withInput();
             }
+        } elseif($request->has('draft')) {
+             $messages = [
+                'title.required' => 'Mohon masukkan judul',
+                'slug.required' => 'Mohon masukkan slug',
+                'slug.unique' => 'Slug sudah digunakan',
+                'content.required' => 'Mohon masukkan konten berita',
+                'category.required' => 'Mohon pilih kategori berita, atau buat baru di halaman kategori',
+                'image.image' => 'Silakan pilih hanya file gambar, jpg|png|webp|bitmap|bmp|gif|svg|webp',
+                'image.required' => 'Silakan pilih thumbnail terlebih dahulu'
+            ];
+
+            $rules = [
+                'title' => 'required',
+                'slug' => 'required|unique:news,slug',
+                'content' => 'required',
+                'category' => 'required',
+                'image' => 'image|required'
+            ];
+
+            $validator = Validator::make($request->all(), $rules, $messages);
+
+            if(! $validator->fails()) {
+                $content = $request->content;
+
+                $dom = new \domdocument();
+                $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+                $images = $dom->getelementsbytagname('img');
+
+                foreach($images as $k => $image) {
+                    $data = $image->getattribute('src');
+
+                    list($type, $data) = explode(';', $data);
+                    list(, $data) = explode(',', $data);
+
+                    $data = base64_decode($data);
+                    $image_name = time() . $k . '.png';
+                    Storage::put($image_name, $data);
+                    $image->removeattribute('src');
+                    $image->setattribute('src', $image_name);
+                }
+
+                $content = $dom->savehtml();
+                $thumbnail = $this->handleImage($request->file('image'));
+                $data = [
+                    'title' => $request->title,
+                    'slug' => $request->slug,
+                    'description' => $request->description,
+                    'content' => $content,
+                    'category_id' => $request->category,
+                    'image' => $thumbnail,
+                    'user_id' => auth()->user()->id,
+                    'published_at' => NULL
+                ];
+                $created = Berita::create($data);
+                if($created) {
+                    return redirect()->route('admin.berita.index')->with('status', 'Berita Berhasil Ditambahkan');
+                } else {
+                    return redirect()->route('admin.berita.tambah');
+                }
+            } else {
+                return redirect('/admin/berita/tambah')->withErrors($validator)->withInput();
+            }
         }
     }
 
@@ -168,13 +230,13 @@ class NewsController extends Controller
     {
         if(! $edit) {
             $image_name = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Storage::putFileAs('uploads', $image, $image_name);
+            Storage::disk('local')->putFileAs('uploads', $image, $image_name);
             return $image_name;
         } else {
             $berita = Berita::findOrFail($id);
             Storage::delete('uploads/' . $berita->image);
             $image_name = time() . uniqid() . '.' . $image->getClientOriginalExtension();
-            Storage::putFileAs('uploads', $image, $image_name);
+            Storage::disk('local')->putFileAs('uploads', $image, $image_name);
             return $image_name;
         }
     }
@@ -200,7 +262,10 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $berita = Berita::findOrFail($id);
+        return view('admin.berita.edit', [
+            'berita' => $berita
+        ]);
     }
 
     /**
