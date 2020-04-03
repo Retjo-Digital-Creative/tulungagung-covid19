@@ -180,7 +180,7 @@
                         <div class="line m-auto"></div>
                         <h3 class="title">Peta & Data Sebaran Covid-19</h3>
                         <p class="text-center">Data berikut bersifat sementara dan dapat berubah sewaktu-waktu.
-                            </br><strong>*(update terakhir 31/3/2020)</strong></p>
+                            </br><strong>*(update terakhir {{ \Carbon\Carbon::parse(\DB::table('data_covid_tulungagung')->latest()->pluck('updated_at')->first())->format('d M Y H:i:s') }})</strong></p>
                     </div> <!-- section title -->
                 </div>
 
@@ -495,60 +495,32 @@
                 <div class="col-lg-6">
                     <div class="section-title pb-35">
                         <div class="line"></div>
-                        <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
+                        <h3 class="title"><span>Berita Terbaru</span> COVID-19</h3>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
             <div class="row justify-content-center">
+                @foreach(\App\Berita::latest()->published()->limit(6)->get() as $berita)
                 <div class="col-lg-4 col-md-7">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="blog-image">
-                            <img src="assets/images/blog-1.jpg" alt="blog">
+                            <img src="{{ asset('content/uploads/'. $berita->image) }}" alt="blog">
                         </div>
                         <div class="blog-content">
                             <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
+                                <li>Posted By: <a href="#">{{ $berita->author->name }}</a></li>
+                                <li>{{ $berita->published_at }}</li>
                             </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt
-                                labore.</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                            <a href="{{ route('frontend.berita.show', $berita->slug) }}"><p class="text">{{ $berita->title }}</p></a>
+                            <a class="more" href="{{ route('frontend.berita.show', $berita->slug) }}">Learn More <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
                 </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-2.jpg" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
-                            </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt
-                                labore.</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div>
-                <div class="col-lg-4 col-md-7">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="blog-image">
-                            <img src="assets/images/blog-3.jpg" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
-                            </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt
-                                labore.</p>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div>
+                @endforeach
             </div> <!-- row -->
+            <div class="m-auto text-center">
+                <a href="{{ route('frontend.berita.index') }}" class="btn btn-primary btn-lg font-weight-bold">Selengkapnya</a>
+            </div>
         </div> <!-- container -->
     </section>
 

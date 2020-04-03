@@ -16,7 +16,7 @@ $factory->define(Berita::class, function (Faker $faker) {
         'title' => $faker->text($maxNbChars = 200),
         'slug' => Str::slug($faker->text($maxNbChars = 180)),
         'description' => $faker->text($maxNbChars = 300),
-        'image' => 'https://picsum.photos/' . $randNum,
+        'image' => '15858355765e85ee386a410.png',
         'content' => $faker->text($maxNbChars = 700),
         'user_id' => Arr::random($userId),
         'category_id' => Arr::random($categoryId),

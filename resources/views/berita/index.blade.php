@@ -75,6 +75,10 @@
                                     <li class="nav-item">
                                         <a class="page-scroll font-weight-bold text-dark" href="{{ route('frontend.berita.index') }}">BERITA</a>
                                     </li>
+                                    <form class="form-inline" action="{{ route('frontend.berita.search') }}">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                                    </form>
                                 </ul>
                             </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
@@ -107,8 +111,8 @@
                                 <li>Posted By: <a href="#">{{ $new->author->name }}</a></li>
                                 <li>{{ $new->published_at }}</li>
                             </ul>
-                            <a href="#"><p class="text">{{ $new->title }}</p></a>
-                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                            <a href="{{ route('frontend.berita.show', $new->slug) }}"><p class="text">{{ $new->title }}</p></a>
+                            <a class="btn btn-outline-info" href="{{ route('frontend.berita.show', $new->slug) }}">Learn More <i class="lni-chevron-right"></i></a>
                         </div>
                     </div> <!-- single blog -->
                 </div> 

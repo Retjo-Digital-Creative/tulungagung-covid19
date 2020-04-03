@@ -99,7 +99,7 @@
                 <div class="col-md-12 col-sm-8">
                     <div class="content">
                         <div class="blog-image">
-                            <img src="{{ $berita->image }}" alt="{{ $berita->title }}" class="img img-thumbnail" style="width: 100%;height: auto;margin: 0 auto;display: block">
+                            <img src="{{ asset('content/uploads/' . $berita->image) }}" alt="{{ $berita->title }}" class="img img-thumbnail" style="height: auto;margin: 0 auto;display: block">
                         </div><br>
                         {!! $berita->content !!}
                     </div>

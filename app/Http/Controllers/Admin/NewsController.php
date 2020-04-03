@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
+use Intervention\Image\Facades\Image;
 
 class NewsController extends Controller
 {
@@ -35,6 +36,34 @@ class NewsController extends Controller
         return view('berita.index', [
             'news' => $news
         ]);
+    }
+
+    /**
+     * Search some berita
+     * 
+     * @param  Request $request
+     * @return mixed
+     */
+    public function search(Request $request)
+    {
+        if($request->q) {
+            $news = Berita::published()
+                            ->latest()
+                            ->where('title', 'like', '%' . $request->q . '%')
+                            ->orWhereHas('category', function($query) use ($request) {
+                                $query->where('title', 'like', '%' . $request->q . '%');
+                            })
+                            ->orWhereHas('author', function($query) use ($request) {
+                                $query->where('name', 'like', '%' . $request->q . '%');
+                            })
+                            ->paginate(6);
+            $news->withPath('/cari');
+            return view('berita.index', [
+                'news' => $news
+            ]);
+        } else {
+            abort(404, 'Sorry Not Found');
+        }
     }
 
     /**
@@ -136,17 +165,20 @@ class NewsController extends Controller
                 $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
                 $images = $dom->getelementsbytagname('img');
 
-                foreach($images as $k => $image) {
-                    $data = $image->getattribute('src');
-
-                    list($type, $data) = explode(';', $data);
-                    list(, $data) = explode(',', $data);
-
-                    $data = base64_decode($data);
-                    $image_name = time() . $k . '.png';
-                    Storage::put($image_name, $data);
-                    $image->removeattribute('src');
-                    $image->setattribute('src', $image_name);
+                foreach($images as $k => $img) {
+                    $src = $img->getAttribute('src');
+                    if(preg_match('/data:image/', $src)){                
+                        preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+                        $mimetype = $groups['mime'];                
+                        $filename = uniqid();
+                        $filepath = "/content/uploads/$filename.$mimetype";    
+                        $image = Image::make($src)
+                          ->encode($mimetype, 100)
+                          ->save(public_path($filepath));                
+                        $new_src = asset($filepath);
+                        $img->removeAttribute('src');
+                        $img->setAttribute('src', $new_src);
+                    }
                 }
 
                 $content = $dom->savehtml();
@@ -194,21 +226,24 @@ class NewsController extends Controller
             if(! $validator->fails()) {
                 $content = $request->content;
 
-                $dom = new \domdocument();
+                $dom = new \DOMDocument();
                 $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
                 $images = $dom->getelementsbytagname('img');
 
-                foreach($images as $k => $image) {
-                    $data = $image->getattribute('src');
-
-                    list($type, $data) = explode(';', $data);
-                    list(, $data) = explode(',', $data);
-
-                    $data = base64_decode($data);
-                    $image_name = time() . $k . '.png';
-                    Storage::put($image_name, $data);
-                    $image->removeattribute('src');
-                    $image->setattribute('src', $image_name);
+                foreach($images as $k => $img) {
+                    $src = $img->getAttribute('src');
+                    if(preg_match('/data:image/', $src)){                
+                        preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+                        $mimetype = $groups['mime'];                
+                        $filename = uniqid();
+                        $filepath = "/content/uploads/$filename.$mimetype";    
+                        $image = Image::make($src)
+                          ->encode($mimetype, 100)
+                          ->save(public_path($filepath));                
+                        $new_src = asset($filepath);
+                        $img->removeAttribute('src');
+                        $img->setAttribute('src', $new_src);
+                    }
                 }
 
                 $content = $dom->savehtml();
@@ -314,17 +349,20 @@ class NewsController extends Controller
                 $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
                 $images = $dom->getelementsbytagname('img');
 
-                foreach($images as $k => $image) {
-                    $data = $image->getattribute('src');
-
-                    list($type, $data) = explode(';', $data);
-                    list(, $data) = explode(',', $data);
-
-                    $data = base64_decode($data);
-                    $image_name = time() . $k . '.png';
-                    Storage::put($image_name, $data);
-                    $image->removeattribute('src');
-                    $image->setattribute('src', $image_name);
+                foreach($images as $k => $img) {
+                    $src = $img->getAttribute('src');
+                    if(preg_match('/data:image/', $src)){                
+                        preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+                        $mimetype = $groups['mime'];                
+                        $filename = uniqid();
+                        $filepath = "/content/uploads/$filename.$mimetype";    
+                        $image = Image::make($src)
+                          ->encode($mimetype, 100)
+                          ->save(public_path($filepath));                
+                        $new_src = asset($filepath);
+                        $img->removeAttribute('src');
+                        $img->setAttribute('src', $new_src);
+                    }
                 }
 
                 $content = $dom->savehtml();
@@ -375,17 +413,20 @@ class NewsController extends Controller
                 $dom->loadHTML($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
                 $images = $dom->getelementsbytagname('img');
 
-                foreach($images as $k => $image) {
-                    $data = $image->getattribute('src');
-
-                    list($type, $data) = explode(';', $data);
-                    list(, $data) = explode(',', $data);
-
-                    $data = base64_decode($data);
-                    $image_name = time() . $k . '.png';
-                    Storage::put($image_name, $data);
-                    $image->removeattribute('src');
-                    $image->setattribute('src', $image_name);
+                foreach($images as $k => $img) {
+                    $src = $img->getAttribute('src');
+                    if(preg_match('/data:image/', $src)){                
+                        preg_match('/data:image\/(?<mime>.*?)\;/', $src, $groups);
+                        $mimetype = $groups['mime'];                
+                        $filename = uniqid();
+                        $filepath = "/content/uploads/$filename.$mimetype";    
+                        $image = Image::make($src)
+                          ->encode($mimetype, 100)
+                          ->save(public_path($filepath));                
+                        $new_src = asset($filepath);
+                        $img->removeAttribute('src');
+                        $img->setAttribute('src', $new_src);
+                    }
                 }
 
                 $content = $dom->savehtml();
