@@ -173,10 +173,7 @@
                             </a>
                             <p class="text">&#169; Dinas Kominfo Kabupaten Tulungagung</p>
                             <ul class="social">
-                                <li><a href="#"><i class="lni-facebook-filled"></i></a></li>
-                                <li><a href="#"><i class="lni-twitter-filled"></i></a></li>
-                                <li><a href="#"><i class="lni-instagram-filled"></i></a></li>
-                                <li><a href="#"><i class="lni-linkedin-original"></i></a></li>
+                                <li><a href="https://www.instagram.com/kominfo_tulungagung/"><i class="lni-instagram-filled"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
