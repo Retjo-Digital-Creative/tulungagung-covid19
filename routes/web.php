@@ -33,16 +33,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 	Route::get('/category', 'Admin\CategoriesController@index')->name('admin.category.index');
 	Route::post('/category/store', 'Admin\CategoriesController@store')->name('admin.category.store');
 	Route::get('/category/fetch/{id}', 'Admin\CategoriesController@getData')->name('admin.category.fetch');
-	Route::delete('/category/delete/{id}', 'Admin\CategoriesController@delete')->name('admin.category.delete');
+	Route::delete('/category/delete/{id}', 'Admin\CategoriesController@destroy')->name('admin.category.delete');
 	Route::put('/category/update/{id}', 'Admin\CategoriesController@update')->name('admin.category.update');
 });
 
-Route::group(['middleware' => 'auth'], function() {
-	Route::delete('/data/delete/{id}', 'Admin\DataCovid@deleteData')->name('admin.data.delete');
-	Route::post('/data/store', 'Admin\DataCovid@newData')->name('admin.data.store');
-	Route::get('/data/fetch/{id}', 'Admin\DataCovid@getData')->name('admin.data.get');
-	Route::put('/data/update/{id}', 'Admin\DataCovid@updateData')->name('admin.data.update');
-});
+Route::delete('/data/delete/{id}', 'Admin\DataCovid@deleteData')->name('admin.data.delete');
+Route::post('/data/store', 'Admin\DataCovid@newData')->name('admin.data.store');
+Route::get('/data/fetch/{id}', 'Admin\DataCovid@getData')->name('admin.data.get');
+Route::put('/data/update/{id}', 'Admin\DataCovid@updateData')->name('admin.data.update');
 
 Route::group(['prefix' => 'berita'], function() {
 	Route::get('/', 'Admin\NewsController@index')->name('frontend.berita.index');

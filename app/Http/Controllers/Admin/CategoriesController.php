@@ -78,6 +78,8 @@ class CategoriesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Category::find($id);
+        $data->delete();
+        return response()->json(['code' => 200, 'message' => 'Kategori berhasil dihapus!']);
     }
 }

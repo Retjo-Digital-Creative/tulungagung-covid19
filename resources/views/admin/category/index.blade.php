@@ -113,7 +113,7 @@
 <script src="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/datatables.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script>
-	$(document).on('click', '.edit', function() {
+	$(document).on('click', '#categories-table .edit', function() {
 		let id = $(this).attr('data-id')
 		$.get('/admin/category/fetch/' + id, function(res) {
 			$('#editCategoryModal').modal({
@@ -198,6 +198,41 @@
 			}
 		})
 	})
+
+	$(document).on('click', '#categories-table .delete', function() {
+		Swal.fire({
+			title: 'Yakin ingin menghapus kategori ini?',
+			icon: 'warning',
+			text: 'Aksi ini tidak dapat dibatalkan',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Yes, delete it!',
+			showLoaderOnConfirm: true
+		}).then((res) => {
+			if(res.value) {
+				let id = $(this).attr('data-id')
+				$.ajax({
+					url: '/admin/category/delete/' + id,
+					type: 'delete',
+					data: {
+						_token: $('[name=_token]').val()
+					},
+					beforeSend: function() {
+						$(this).html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>');
+					},
+					success: function(data) {
+						Toast.fire({
+							title: 'Success',
+							icon: 'success',
+							text: data.message
+						})
+						$('#categories-table').DataTable().ajax.reload()
+					}
+				})
+			}
+		})
+	});
 
 	$('#title').keyup(function() {
 		let text = $(this).val();

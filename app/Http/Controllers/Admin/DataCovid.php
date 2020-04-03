@@ -67,11 +67,12 @@ class DataCovid extends Controller
             'jumlah_meninggal' => $request->jumlah_meninggal ? $request->jumlah_meninggal : 0,
             'jumlah_sembuh' => $request->jumlah_sembuh ? $request->jumlah_sembuh : 0,
             'jumlah_odp' => $request->jumlah_odp ? $request->jumlah_odp : 0,
-            'jumlah_pdp' => $request->jumlah_pdp ? $request->jumlah_positif : 0
+            'jumlah_pdp' => $request->jumlah_pdp ? $request->jumlah_pdp : 0
         ];
 
         $update = Data::find($id);
         $update->update($data);
+        return response()->json($update);
     }
 
     /**

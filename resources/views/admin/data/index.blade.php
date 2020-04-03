@@ -186,13 +186,13 @@
 
 	$('#newDataModal form button').on('click', function() {
 		event.preventDefault();
-		let nama_kecamatan = $('[name=nama_kecamatan]').val()
-		let jumlah_positif = $('[name=jumlah_positif]').val()
-		let jumlah_meninggal = $('[name=jumlah_meninggal]').val()
-		let jumlah_sembuh = $('[name=jumlah_sembuh]').val()
-		let jumlah_odp = $('[name=jumlah_odp]').val()
-		let jumlah_pdp = $('[name=jumlah_pdp]').val()
-		let _token = $('[name=_token]').val()
+		let nama_kecamatan = $('#newDataModal [name=nama_kecamatan]').val()
+		let jumlah_positif = $('#newDataModal [name=jumlah_positif]').val()
+		let jumlah_meninggal = $('#newDataModal [name=jumlah_meninggal]').val()
+		let jumlah_sembuh = $('#newDataModal [name=jumlah_sembuh]').val()
+		let jumlah_odp = $('#newDataModal [name=jumlah_odp]').val()
+		let jumlah_pdp = $('#newDataModal [name=jumlah_pdp]').val()
+		let _token = $('#newDataModal [name=_token]').val()
 
 		$.ajax({
 			type: 'post',
@@ -260,7 +260,7 @@
 		})
 	});
 
-	$(document).on('click', '.edit', function() {
+	$(document).on('click', '#table-data .edit', function() {
 		let id = $(this).attr('data-id')
 		$.get('/data/fetch/' + id, function(data) {
 			$('#editDataModal').modal({
