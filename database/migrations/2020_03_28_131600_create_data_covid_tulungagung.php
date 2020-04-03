@@ -21,7 +21,6 @@ class CreateDataCovidTulungagung extends Migration
             $table->integer('jumlah_sembuh')->nullable()->default(0);
             $table->integer('jumlah_odp')->nullable()->default(0);
             $table->integer('jumlah_pdp')->nullable()->default(0);
-            $table->softDeletes();
             $table->timestamps();
         });
     }

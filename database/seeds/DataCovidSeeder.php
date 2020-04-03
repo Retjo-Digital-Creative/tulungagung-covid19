@@ -20,7 +20,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>2,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:00',
         'updated_at'=>'2020-03-30 06:26:00'
         ] );
@@ -35,7 +34,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>6,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:10',
         'updated_at'=>'2020-03-30 06:26:10'
         ] );
@@ -50,7 +48,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>20,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:26',
         'updated_at'=>'2020-03-30 06:26:26'
         ] );
@@ -65,7 +62,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>19,
         'jumlah_pdp'=>1,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:35',
         'updated_at'=>'2020-03-30 06:26:35'
         ] );
@@ -80,7 +76,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>29,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:44',
         'updated_at'=>'2020-03-30 06:26:44'
         ] );
@@ -95,7 +90,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>17,
         'jumlah_pdp'=>2,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:26:51',
         'updated_at'=>'2020-03-30 06:26:51'
         ] );
@@ -110,7 +104,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>21,
         'jumlah_pdp'=>1,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:27:03',
         'updated_at'=>'2020-03-30 06:27:03'
         ] );
@@ -125,7 +118,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>41,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:27:15',
         'updated_at'=>'2020-03-30 06:28:21'
         ] );
@@ -140,7 +132,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>99,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:28:12',
         'updated_at'=>'2020-03-30 06:28:12'
         ] );
@@ -155,7 +146,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>32,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:28:41',
         'updated_at'=>'2020-03-30 06:28:41'
         ] );
@@ -170,7 +160,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>37,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:29:02',
         'updated_at'=>'2020-03-30 06:29:02'
         ] );
@@ -185,7 +174,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>17,
         'jumlah_pdp'=>1,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:29:17',
         'updated_at'=>'2020-03-30 06:29:17'
         ] );
@@ -200,7 +188,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>36,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:29:31',
         'updated_at'=>'2020-03-30 06:29:31'
         ] );
@@ -215,7 +202,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>14,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:29:42',
         'updated_at'=>'2020-03-30 06:29:42'
         ] );
@@ -230,7 +216,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>27,
         'jumlah_pdp'=>1,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:29:50',
         'updated_at'=>'2020-03-30 06:29:50'
         ] );
@@ -245,7 +230,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>4,
         'jumlah_pdp'=>0,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:30:02',
         'updated_at'=>'2020-03-30 06:30:02'
         ] );
@@ -260,7 +244,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>18,
         'jumlah_pdp'=>4,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:30:09',
         'updated_at'=>'2020-03-30 06:30:09'
         ] );
@@ -275,7 +258,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>23,
         'jumlah_pdp'=>4,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:34:18',
         'updated_at'=>'2020-03-30 06:34:18'
         ] );
@@ -290,7 +272,6 @@ class DataCovidSeeder extends Seeder
         'jumlah_sembuh'=>0,
         'jumlah_odp'=>26,
         'jumlah_pdp'=>2,
-        'deleted_at'=>NULL,
         'created_at'=>'2020-03-30 06:34:26',
         'updated_at'=>'2020-03-30 06:34:26'
         ] );

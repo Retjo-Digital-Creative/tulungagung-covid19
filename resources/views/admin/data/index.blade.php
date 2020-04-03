@@ -24,8 +24,15 @@
 	<div class="container">
 		<div class="card">
 			<div class="card-header">
-				<h2 class="float-left">Table Data</h2>
-				<a href="/tambah" class="btn btn-success float-right" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+				<div class="row">
+					<div class="col-md-9">
+						<h2 class="float-left">Table Data</h2>
+					</div>
+					<div class="col-md-3 mr-auto">
+						<a href="/tambah" class="btn btn-success btn-sm" data-toggle="modal" data-target="#newDataModal"><i class="fas fa-plus"></i> Tambah Data</a>
+						<a href="/refresh" id="reload" class="btn btn-primary btn-sm"><i class="fas fa-redo"></i> Reload Table</a>
+					</div>
+				</div>
 			</div>
 			<div class="card-body">
 				<div class="table-responsive">
@@ -44,6 +51,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!-- New data modal -->
 	<div class="modal fade" id="newDataModal" tabindex="-1" role="dialog" aria-labelledby="newDataModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
@@ -149,7 +157,6 @@
 		processing: true,
 		serverSide: true,
 		ajax: '/admin/data',
-		responsive: true,
 		columns: [
 			{ data: 'nama_kecamatan', name: 'nama_kecamatan' },
 			{ data: 'jumlah_positif', name: 'jumlah_positif' },
@@ -160,6 +167,11 @@
 			{ data: 'action', name: 'action', orderable: false, searchable: false }
 		]
 	});
+
+	$('#reload').on('click', function(e) {
+		e.preventDefault();
+		$('#table-data').DataTable().ajax.reload()
+	})
 	const Toast = Swal.mixin({
 	  toast: true,
 	  position: 'top-end',
