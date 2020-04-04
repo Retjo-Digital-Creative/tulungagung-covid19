@@ -78,13 +78,13 @@
     <!--====== HEADER PART START ======-->
     
     <header class="header-area" >
-        <div class="navbar-area" style="background-image: url({{ asset('assets/images/banner-bg.svg') }})">
+        <div class="navbar-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
                             <a class="navbar-brand" href="berita.html">
-                                <img src="assets/images/logo.png" alt="Logo">
+                                <img src="{{ asset('assets/images/logo-2.png') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -129,7 +129,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <div class="blog-image">
-                            <img src="{{ asset('content/uploads/' . $new->image) }}" alt="blog">
+                            <a href="{{ route('frontend.berita.show', $new->slug) }}"><img src="{{ asset('content/uploads/' . $new->image) }}" alt="blog"></a>
                         </div>
                         <div class="blog-content">
                             <ul class="meta">
@@ -144,7 +144,7 @@
                 @endforeach
             </div> <!-- row -->
         </div> <!-- container -->
-        <div class="container text-center">
+        <div class="container text-center mt-4">
             {{ $news->links() }}
         </div>
     </section>
