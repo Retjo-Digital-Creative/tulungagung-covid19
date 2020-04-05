@@ -227,5 +227,5 @@
 
     <script src="{{ asset('assets/js/particles.min.js') }}"></script>
 
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/berita.js') }}"></script>
 </html>
