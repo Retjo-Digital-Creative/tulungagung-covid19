@@ -91,6 +91,7 @@
 	      <div class="modal-body">
 	        <form action="/update">
 	        	@csrf
+	        	<input type="text" name="id" style="display: none" value="">
 	          <div class="form-group">
 	            <label for="nama_kecamatan" class="col-form-label">Judul Kategori :</label>
 	            <input type="text" class="form-control" id="title" name="title" value="">
@@ -119,12 +120,14 @@
 			$('#editCategoryModal').modal({
 				show: true
 			})
+			$('#editCategoryModal [name=id]').val(res.id)
 			$('#editCategoryModal #title').val(res.title)
 			$('#editCategoryModal #slug').val(res.slug)
 
 			$('#editCategoryModal').submit(function(event) {
 				event.preventDefault()
 
+				let id = $('#editCategoryModal [name=id]').val()
 				let title = $('#editCategoryModal #title').val()
 				let slug = $('#editCategoryModal #slug').val()
 				let _token = $('[name=_token]').val()
@@ -277,6 +280,11 @@
 				name: 'action'
 			}
 		]
+	})
+
+	$('#reload').click(function(e) {
+		e.preventDefault()
+		$('#categories-table').DataTable().ajax.reload()
 	})
 </script>
 @endpush
