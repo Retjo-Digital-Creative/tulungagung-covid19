@@ -595,7 +595,7 @@
                             <a class="logo" href="#">
                                 <img src="assets/images/logo.png" alt="logo">
                             </a>
-                            <p class="text">&#169; Dinas Kominfo Kabupaten Tulungagung</p>
+                            <p class="text">&#169; 2020 - Dinas Kominfo Kabupaten Tulungagung</p>
                             <ul class="social">
                                 <li><a href="https://www.instagram.com/kominfo_tulungagung/"><i class="lni-instagram-filled"></i></a></li>
                             </ul>
@@ -607,7 +607,7 @@
                     <div class="col-lg-12">
                         <div class="copyright d-sm-flex justify-content-between">
                             <div class="copyright-content">
-                                <p class="text">Dibuat dengan <i class="fas fa-heart text-danger"></i> oleh <a href="https://instagram.com/alfanjauhari_">Alfan Jauhari</a> dan <a href="https://instagram.com/surya_maulana70">Surya1337</a></p>
+                                <p class="text">Dibuat dengan penuh cinta <i class="fas fa-heart text-danger"></i> oleh para relawan; <a href="https://instagram.com/alfanjauhari_">Alfan Jauhari</a>, <a href="https://instagram.com/surya_maulana70">Muhammad Surya</a> & <a href="https://instagram.com/defrindr">Defri Indra M.</a></p>
                             </div> <!-- copyright content -->
                         </div> <!-- copyright -->
                     </div>
