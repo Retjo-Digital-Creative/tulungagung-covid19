@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use App\DataCovid;
+use App\Observers\DataCovidObserver as DataObserve;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        DataCovid::observe(DataObserve::class);
         Schema::defaultStringLength(191);
     }
 }

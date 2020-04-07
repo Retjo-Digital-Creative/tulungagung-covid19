@@ -607,8 +607,7 @@
                     <div class="col-lg-12">
                         <div class="copyright d-sm-flex justify-content-between">
                             <div class="copyright-content">
-                                <p class="text">Powered by <a href="https://pedulicorona.com/"
-                                        rel="nofollow">Peduli Corona</a></p>
+                                <p class="text">Dibuat dengan <i class="fas fa-heart text-danger"></i> oleh <a href="https://instagram.com/alfanjauhari_">Alfan Jauhari</a> dan <a href="https://instagram.com/surya_maulana70">Surya1337</a></p>
                             </div> <!-- copyright content -->
                         </div> <!-- copyright -->
                     </div>

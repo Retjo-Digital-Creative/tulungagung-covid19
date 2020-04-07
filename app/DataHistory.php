@@ -4,11 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class DataCovid extends Model
-{	
-    protected $table = 'data_covid_tulungagung';
+class DataHistory extends Model
+{
     protected $fillable = [
-    	'nama_kecamatan',
+    	'data_id',
     	'jumlah_positif',
     	'jumlah_meninggal',
     	'jumlah_sembuh',
@@ -16,8 +15,8 @@ class DataCovid extends Model
     	'jumlah_pdp'
     ];
 
-    public function history()
+    public function data()
     {
-    	return $this->hasMany(DataHistory::class, 'data_id');
+    	return $this->belongsTo(DataCovid::class);
     }
 }

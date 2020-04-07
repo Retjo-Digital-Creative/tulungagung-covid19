@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Frontend\MainController@index')->name('frontend.home.landing');
-Route::get('/getDataCovid', 'Frontend\MainController@getData')->name('frontend.getData.covid');
 
 Auth::routes();
 
@@ -46,4 +45,9 @@ Route::group(['prefix' => 'berita'], function() {
 	Route::get('/', 'Admin\NewsController@index')->name('frontend.berita.index');
 	Route::get('/baca/{berita}', 'Admin\NewsController@show')->name('frontend.berita.show');
 	Route::get('/cari', 'Admin\NewsController@search')->name('frontend.berita.search');
+});
+
+Route::group(['prefix' => 'api'], function() {
+	Route::get('/', 'Api\ApiController@getData')->name('api.data.get');
+	Route::get('/query/{query}', 'Api\ApiController@getDataWithQuery')->name('api.data.withQuery');
 });

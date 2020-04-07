@@ -112,6 +112,7 @@
 	      <div class="modal-body">
 	        <form action="/update">
 	        	@csrf
+	        	<input type="text" name="id" value="" style="display: none;">
 	          <div class="form-group">
 	            <label for="nama_kecamatan" class="col-form-label">Nama Kecamatan :</label>
 	            <input type="text" class="form-control" id="nama_kecamatan" name="nama_kecamatan" value="">
@@ -153,6 +154,11 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <script>
+	$.ajaxSetup({
+	    headers: {
+	        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	    }
+	});
 	const table = $('#table-data').DataTable({
 		processing: true,
 		serverSide: true,
@@ -210,7 +216,8 @@
 					text: 'Data Berhasil ditambahkan'
 				})
 				$('#newDataModal form button').html('Tambah Data')
-				$('#newDataModal').modal('show')
+				$('#newDataModal form').trigger('reset')
+				$('#newDataModal').modal('hide')
 				$('#table-data').DataTable().ajax.reload();
 			},
 			error: function(xhr) {
@@ -261,33 +268,26 @@
 	});
 
 	$(document).on('click', '#table-data .edit', function() {
-		let id = $(this).attr('data-id')
+		let id = $(this).data('id')
 		$.get('/data/fetch/' + id, function(data) {
 			$('#editDataModal').modal({
 				show: true
 			})
+			$('#editDataModal [name=id]').val(data.id)
 			$('#editDataModal #nama_kecamatan').val(data.nama_kecamatan)
 			$('#editDataModal #jumlah_positif').val(data.jumlah_positif)
 			$('#editDataModal #jumlah_meninggal').val(data.jumlah_meninggal)
 			$('#editDataModal #jumlah_sembuh').val(data.jumlah_sembuh)
 			$('#editDataModal #jumlah_odp').val(data.jumlah_odp)
 			$('#editDataModal #jumlah_pdp').val(data.jumlah_pdp)
-
-			$('#editDataModal form').on('submit', function(event) {
+		})
+		$(document).on('submit', '#editDataModal form', function(event) {
 				event.preventDefault()
-				let nama_kecamatan = $('#editDataModal #nama_kecamatan').val();
-				let jumlah_positif = $('#editDataModal #jumlah_positif').val()
-				let jumlah_meninggal = $('#editDataModal #jumlah_meninggal').val()
-				let jumlah_sembuh = $('#editDataModal #jumlah_sembuh').val()
-				let jumlah_odp = $('#editDataModal #jumlah_odp').val()
-				let jumlah_pdp = $('#editDataModal #jumlah_pdp').val()
-				let _token = $('[name=_token]').val()
+				let id = $('#editDataModal [name=id]').val()
 				$.ajax({
 					url: '/data/update/' + id,
 					type: 'put',
-					data: {
-						nama_kecamatan, jumlah_positif, jumlah_meninggal, jumlah_sembuh, jumlah_odp, jumlah_pdp, _token
-					},
+					data: $('#editDataModal form').serialize(),
 					beforeSend: function() {
 						$('#editDataModal form button').html('<span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>')
 					},
@@ -297,6 +297,8 @@
 							icon: 'success',
 							text: 'Data berhasil diubah'
 						})
+						$('#editDataModal form').trigger('reset')
+						$('#editDataModal').modal('hide')
 						$('#table-data').DataTable().ajax.reload()
 						$('#editDataModal form button').html('Edit Data')
 					},
@@ -312,8 +314,7 @@
 					}
 				})
 			})
-		})
-
+		console.log(id);
 	})
 </script>
 @endpush
