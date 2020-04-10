@@ -184,77 +184,80 @@
                     </div> <!-- section title -->
                 </div>
 
-
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
-        <div class="card bg-primary img-card box-primary-shadow">
-            <div class="card-body">
-                <div class="d-flex">
-                    <div class="text-white">
-                        <p class="text-white mb-0">TOTAL ODP</p>
-                        <h2 class="mb-0 text-white">{{ $data->sum('jumlah_odp') }}</h2>
-                        <p class="text-white mb-0">ORANG</p>
-                    </div>
-                    <div class="ml-auto">
-                        <img src="https://pedulicorona.com/images/icons/mood-neutral-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
-        <div class="card bg-warning img-card box-primary-shadow">
-            <div class="card-body">
-                <div class="d-flex">
-                    <div class="text-white">
-                        <p class="text-white mb-0">TOTAL PDP</p>
-                        <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_pdp') }}</h2>
-                        <p class="text-white mb-0">ORANG</p>
-                    </div>
-                    <div class="ml-auto">
-                        <img src="https://pedulicorona.com/images/icons/mood-neutral-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
+                    <div class="card bg-primary img-card box-primary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">TOTAL ODP</p>
+                                    <h2 class="mb-0 text-white">{{ $data->sum('jumlah_odp') }}</h2>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="https://pedulicorona.com/images/icons/mood-neutral-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
-        <div class="card bg-danger img-card box-primary-shadow">
-            <div class="card-body">
-                <div class="d-flex">
-                    <div class="text-white">
-                        <p class="text-white mb-0">TOTAL POSITIF</p>
-                        <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_positif') }}</h2>
-                        <p class="text-white mb-0">ORANG</p>
-                    </div>
-                    <div class="ml-auto">
-                        <img src="https://pedulicorona.com/images/icons/mood-sad-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
-        <div class="card bg-success img-card box-primary-shadow">
-            <div class="card-body">
-                <div class="d-flex">
-                    <div class="text-white">
-                        <h4 class="text-white mb-0">TULUNGAGUNG</h>
-                        <p class="text-white mb-3">{{ $data->sum('jumlah_positif') }} Positif, {{ $data->sum('jumlah_sembuh') }} Sembuh, {{ $data->sum('jumlah_meninggal') }} Meninggal</p>
-                    </div>
-                    <div class="ml-auto">
-                        <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
+                    <div class="card bg-warning img-card box-primary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">TOTAL PDP</p>
+                                    <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_pdp') }}</h2>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="https://pedulicorona.com/images/icons/mood-neutral-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
+                    <div class="card bg-danger img-card box-primary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <p class="text-white mb-0">TOTAL POSITIF</p>
+                                    <h2 class="mb-0 number-font text-white">{{ $data->sum('jumlah_positif') }}</h2>
+                                    <p class="text-white mb-0">ORANG</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="https://pedulicorona.com/images/icons/mood-sad-outline.svg" alt="Positif" width="50" height="50" style="opacity: 0.4;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="table-responsive-md">
-                    {{ $html->table(['class' => 'table table-striped table-bordered']) }}
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 mb-30">
+                    <div class="card bg-success img-card box-primary-shadow">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <h4 class="text-white mb-0">TULUNGAGUNG</h>
+                                    <p class="text-white mb-3">{{ $data->sum('jumlah_positif') }} Positif, {{ $data->sum('jumlah_sembuh') }} Sembuh, {{ $data->sum('jumlah_meninggal') }} Meninggal</p>
+                                </div>
+                                <div class="ml-auto">
+                                    <img src="{{ asset('assets/images/favicon.png') }}" alt="Positif" width="60" height="50" style="opacity: 0.7;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-sm-12">
+                    <div class="container py-2">
+                        <canvas id="graph"></canvas>
+                    </div>
+                    <div class="table-responsive-md">
+                        {{ $html->table(['class' => 'table table-striped table-bordered']) }}
+                    </div>
                 </div>
             </div> <!-- row -->
         </div>
@@ -658,7 +661,78 @@
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script>
+        $(document).ready(function(){
+            $.ajax ({
+               url: '/chart',
+               method: 'get',
+               success: function(data){
+                    window.chartColors = {
+                        red: 'rgb(255, 99, 132)',
+                        orange: 'rgb(255, 159, 64)',
+                        yellow: 'rgb(255, 205, 86)',
+                        green: 'rgb(75, 192, 192)',
+                        blue: 'rgb(54, 162, 235)',
+                        purple: 'rgb(153, 102, 255)',
+                        grey: 'rgb(201, 203, 207)'
+                    };
+
+                    Chart.Line($("#graph").get(0).getContext("2d"), {
+                        data: {
+                            labels: data.date,
+                            datasets: [
+                                {
+                                    label: 'jumlah positif',
+                                    borderColor: window.chartColors.red,
+                                    backgroundColor: window.chartColors.red,
+                                    fill: false,
+                                    data: data.data.jumlah_positif,
+                                },
+                                /*{
+                                    label: 'jumlah meninggal',
+                                    borderColor: window.chartColors.orange,
+                                    backgroundColor: window.chartColors.orange,
+                                    fill: false,
+                                    data: data.data.jumlah_meninggal,
+                                },
+                                {
+                                    label: 'jumlah sembuh',
+                                    borderColor: window.chartColors.yellow,
+                                    backgroundColor: window.chartColors.yellow,
+                                    fill: false,
+                                    data: data.data.jumlah_sembuh,
+                                },
+                                {
+                                    label: 'jumlah odp',
+                                    borderColor: window.chartColors.green,
+                                    backgroundColor: window.chartColors.green,
+                                    fill: false,
+                                    data: data.data.jumlah_odp,
+                                },*/
+                                {
+                                    label: 'jumlah pdp',
+                                    borderColor: window.chartColors.blue,
+                                    backgroundColor: window.chartColors.blue,
+                                    fill: false,
+                                    data: data.data.jumlah_pdp,
+                                },
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            hoverMode: 'index',
+                            stacked: false,
+                            title: {
+                                display: true,
+                                text: 'Grafik Data Corona Tulungagung'
+                            }
+                        }
+                    });
+                } 
+            });
+        });
+
         $('#table-data').DataTable({
             processing: true,
             serverSide: true,

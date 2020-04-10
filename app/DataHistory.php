@@ -12,8 +12,10 @@ class DataHistory extends Model
     	'jumlah_meninggal',
     	'jumlah_sembuh',
     	'jumlah_odp',
-    	'jumlah_pdp'
-    ];
+		'jumlah_pdp',
+		'created_at',
+		'updated_at'
+	];
 
     public function data()
     {
