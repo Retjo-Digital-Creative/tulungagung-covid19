@@ -22,7 +22,9 @@ class DataCovidObserver
             'jumlah_meninggal' => $original['jumlah_meninggal'],
             'jumlah_sembuh' => $original['jumlah_sembuh'],
             'jumlah_odp' => $original['jumlah_odp'],
-            'jumlah_pdp' => $original['jumlah_pdp']
+            'jumlah_pdp' => $original['jumlah_pdp'],
+            'created_at' => $original['created_at'],
+            'updated_at' => $original['updated_at']
         ]);
     }
 }

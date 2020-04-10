@@ -47,6 +47,10 @@ Route::group(['prefix' => 'berita'], function() {
 	Route::get('/cari', 'Admin\NewsController@search')->name('frontend.berita.search');
 });
 
+Route::group(['prefix' => 'chart'], function() {
+	Route::get('/', 'Api\ApiController@chart')->name('api.data.chart');
+});
+
 Route::group(['prefix' => 'api'], function() {
 	Route::get('/', 'Api\ApiController@getData')->name('api.data.get');
 	Route::get('/query/{query}', 'Api\ApiController@getDataWithQuery')->name('api.data.withQuery');
