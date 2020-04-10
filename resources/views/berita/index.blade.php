@@ -183,7 +183,7 @@
                     <div class="col-lg-12">
                         <div class="copyright d-sm-flex justify-content-between">
                             <div class="copyright-content">
-                                <p class="text">Dibuat dengan sepenuh <i class="fas fa-heart text-danger"></i> oleh para relawan; <a href="https://instagram.com/alfanjauhari_">Alfan Jauhari</a>, <a href="https://instagram.com/surya_maulana70">Muhammad Surya</a> & <a href="https://instagram.com/defrindr">Defri Indra M.</a></p>
+                                <p class="text">Dibuat dengan sepenuh <i class="fas fa-heart text-danger"></i> oleh para relawan; <a href="https://instagram.com/surya_maulana70">Muhammad Surya</a>, <a href="https://instagram.com/alfanjauhari_">Alfan Jauhari</a>, <a href="https://instagram.com/mfaruq10">M Faruq</a>, <a href="https://instagram.com/defrindr">Defri Indra M</a> & <a href="https://instagram.com/saddamazyazy">Saddam Azy Azy.</a></p>
                             </div> <!-- copyright content -->
                         </div> <!-- copyright -->
                     </div>
