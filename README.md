@@ -5,7 +5,7 @@
 ## Table Of Contents
 - [SATGAS SIAGA COVID19 TULUNGAGUNG](#satgas-siaga-covid19-tulungagung)
   - [Table Of Contents](#table-of-contents)
-  - [Creators](#creator)
+  - [Creators](#creators)
   - [Kontributror](#kontributor)
   - [Instalasi](#Instalasi)
   - [Dokumentasi API dan Konfigurasi Chart](#dokumentasi-api-dan-konfigurasi-chart)
