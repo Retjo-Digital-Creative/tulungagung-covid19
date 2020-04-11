@@ -1,6 +1,6 @@
 # SATGAS SIAGA COVID19 TULUNGAGUNG
 ---------------------
- SATGAS SIAGA COVID19 TULUNGAGUNG adalah aplikasi untuk mendapatkan update terbaru persebaran mengenai virus Corona (COVID-19) di Tulungagung.
+ SATGAS SIAGA COVID19 TULUNGAGUNG adalah aplikasi untuk mendapatkan update terbaru persebaran mengenai virus Corona (COVID-19) di Tulungagung yang dikembangkan oleh para [Creators](#creator) dan [Kontributror](#kontributor) yang bersedia meluangkan waktunya untuk berkontribusi membuat Aplikasi yang berbasis website [SATGAS SIAGA COVID19 TULUNGAGUNG](#satgas-siaga-covid19-tulungagung).
 
 ## Table Of Contents
 - [SATGAS SIAGA COVID19 TULUNGAGUNG](#satgas-siaga-covid19-tulungagung)
