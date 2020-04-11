@@ -54,7 +54,7 @@ Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG.
         </td>
       <td align="center">
         <a href="https://www.instagram.com/mfaruq10"><img src="https://avatars3.githubusercontent.com/u/9819957?v=3" width="100px;" alt=""/><br />
-        <sub><b>Alfan Jauhari</b></sub></a><br /> 
+        <sub><b>M Faruq</b></sub></a><br /> 
         <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=mfaruq" title="Design">🎨</a> 
         </td>
       <td align="center">
