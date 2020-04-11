@@ -4,9 +4,9 @@
 
 ## Table Of Contents
 - [SATGAS SIAGA COVID19 TULUNGAGUNG](#satgas-siaga-covid19-tulungagung)
+  - [Table Of Contents](#table-of-contents)
   - [Creators](#creator)
   - [Kontributror](#kontributor)
-  - [Table Of Contents](#table-of-contents)
   - [Instalasi](#Instalasi)
   - [Dokumentasi API dan Konfigurasi Chart](#dokumentasi-api-dan-konfigurasi-chart)
   - [List Application Programming Interface (API)](#list-api)
@@ -23,10 +23,11 @@ Aplikasi dibuat oleh dua orang dari Tulungagung dibantu dengan kontributor yang 
       <td align="center">
         <a href="https://www.instagram.com/surya_maulana70"><img src="https://avatars3.githubusercontent.com/u/29894661?v=3" width="100px;" alt=""/><br />
         <sub><b>Muhammad Surya</b></sub></a><br /> 
-        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=suryamaulana" title="Documentation">📖</a>
         <a href="#ideas-suryamaulana" title="Ideas, Planning, & Testing">🤔</a>
         <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=suryamaulana" title="Code">💻</a>
-        <a href="#maintenance-suryamaulana" title="Maintenance">🚧</a> <a href="#suryamaulana" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a>
+        <a href="#maintenance-suryamaulana" title="Maintenance">🚧</a>
+        <a href="#suryamaulana" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a>
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=suryamaulana" title="Documentation">📖</a>
         </td>
       <td align="center">
         <a href="https://www.instagram.com/alfanjauhari_"><img src="https://avatars3.githubusercontent.com/u/57592351?v=3" width="100px;" alt=""/><br />
@@ -41,7 +42,7 @@ Aplikasi dibuat oleh dua orang dari Tulungagung dibantu dengan kontributor yang 
 </table>
 
 ## Kontributor
-Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG, terima kasih atas kontribusinya. 
+Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG. 
 
 <table>
     <tr>
@@ -49,6 +50,7 @@ Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG, terima kasih atas kontrib
         <a href="https://www.instagram.com/defrindr"><img src="https://avatars2.githubusercontent.com/u/37988569?v=3" width="100px;" alt=""/><br />
         <sub><b>Defri Indra M</b></sub></a><br /> 
         <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=defri Indra M" title="Code">💻</a>
+        <a href="#ideas-defrindr" title="Ideas, Planning, & Testing">🤔</a>
         </td>
       <td align="center">
         <a href="https://www.instagram.com/mfaruq10"><img src="https://avatars3.githubusercontent.com/u/9819957?v=3" width="100px;" alt=""/><br />
