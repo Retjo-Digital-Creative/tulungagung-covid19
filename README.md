@@ -714,8 +714,6 @@ Output API Kasus Tanpa Histori
 **2. API Kasus Dengan Option Tertentu**
 API Kasus Dengan Option tertentu berfungsi untuk mengambil salah satu data contohnya Jumlah Positif, Jumlah Meninggal, Jumlah Negatif, Jumlah ODP, Jumlah PDP.
 <br>
-API Berada Pada List berikut.
-
 Controller API Kasus Dengan Option Tertentu ada di directory /app/Http/Controller/Api/ApiController.php
 
 ```php
@@ -763,6 +761,8 @@ Controller API Kasus Dengan Option Tertentu ada di directory /app/Http/Controlle
     	}
     }
 ```
+
+API Berada Pada List berikut:
 
 API Untuk Mengambil Data Positif : ```/api/query/positif```
 Output :
