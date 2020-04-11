@@ -5,14 +5,67 @@
 ## Table Of Contents
 - [SATGAS SIAGA COVID19 TULUNGAGUNG](#satgas-siaga-covid19-tulungagung)
   - [Table Of Contents](#table-of-contents)
+  - [Creators](#creators)
+  - [Kontributror](#kontributor)
   - [Instalasi](#Instalasi)
   - [Dokumentasi API dan Konfigurasi Chart](#dokumentasi-api-dan-konfigurasi-chart)
   - [List Application Programming Interface (API)](#list-api)
-  - [Creators](#creator)
-  - [Kontributror](#kontributor)
   - [License](#license)
  SATGAS SIAGA COVID19 TULUNGAGUNG
  
+
+## Creators
+---------------
+Aplikasi dibuat oleh dua orang dari Tulungagung dibantu dengan kontributor yang bersedia meluangkan waktu dan tenaganya.
+
+<table>
+    <tr>
+      <td align="center">
+        <a href="https://www.instagram.com/surya_maulana70"><img src="https://avatars3.githubusercontent.com/u/29894661?v=3" width="100px;" alt=""/><br />
+        <sub><b>Muhammad Surya</b></sub></a><br /> 
+        <a href="#ideas-suryamaulana" title="Ideas, Planning, & Testing">🤔</a>
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=suryamaulana" title="Code">💻</a>
+        <a href="#maintenance-suryamaulana" title="Maintenance">🚧</a>
+        <a href="#suryamaulana" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a>
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=suryamaulana" title="Documentation">📖</a>
+        </td>
+      <td align="center">
+        <a href="https://www.instagram.com/alfanjauhari_"><img src="https://avatars3.githubusercontent.com/u/57592351?v=3" width="100px;" alt=""/><br />
+        <sub><b>Alfan Jauhari</b></sub></a><br /> 
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=alfanjauhari" title="Code">💻</a> 
+        <a href="#ideas-alfanjauhari" title="Ideas, Planning, & Testing">🤔</a> 
+        <a href="#maintenance-alfanjauhari" title="Maintenance">🚧</a>
+        <a href="#question-alfanjauhari" title="Answering Questions">💬</a>
+        <a href="#code-reviewer" title="Reviewed Pull Requests">👀</a>
+      </td>
+    </tr>
+</table>
+
+## Kontributor
+Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG. 
+
+<table>
+    <tr>
+      <td align="center">
+        <a href="https://www.instagram.com/defrindr"><img src="https://avatars2.githubusercontent.com/u/37988569?v=3" width="100px;" alt=""/><br />
+        <sub><b>Defri Indra M</b></sub></a><br /> 
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=defri Indra M" title="Code">💻</a>
+        <a href="#ideas-defrindr" title="Ideas, Planning, & Testing">🤔</a>
+        </td>
+      <td align="center">
+        <a href="https://www.instagram.com/mfaruq10"><img src="https://avatars3.githubusercontent.com/u/9819957?v=3" width="100px;" alt=""/><br />
+        <sub><b>M Faruq</b></sub></a><br /> 
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=mfaruq" title="Design">🎨</a> 
+        </td>
+      <td align="center">
+        <a href="https://www.instagram.com/saddamazyazy"><img src="https://avatars3.githubusercontent.com/u/9819957?v=3" width="100px;" alt=""/><br />
+        <sub><b>Saddam Azy</b></sub></a><br /> 
+        <a href="https://github.com/alfanjauhari/tulungagung-covid19/commits?author=mfaruq" title="Code">💻</a>
+        <a href="#ideas-alfanjauhari" title="Ideas, Planning, & Testing">🤔</a>  
+      </td>
+    </tr>
+</table>
+
 
 ## Instalasi
 ---------------
@@ -791,24 +844,6 @@ Output :
 ```json
 {"Jumlah ODP":"784"}
 ```
-
-
-## Creators
----------------
-Aplikasi dibuat oleh dua orang dari Tulungagung dibantu dengan kontributor yang bersedia meluangkan waktu dan tenaganya.
-
-1. [Muhammad Surya Maulana](https://github.com/suryamaulana)
-2. [Muhammad Alfan Jauhari](https://github.com/alfanjauhari)
-3. [Para Kontributor](#kontributor)
-
-
-## Kontributor
-Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG, terima kasih atas kontribusinya. 
-
-1. [Defri Indra Mahardika](https://github.com/defrindr)
-2. [M Faruq](https://github.com/mfaruq10) 
-3. [Saddam Azy](https://github.com/saddamazyazy) 
-4. Kamu kah selanjutnya?
 
 ### Kontribusi 
 Kamu ingin menjadi gabungan dari SATGAS SIAGA COVID19 TULUNGAGUNG? Kamu bisa membaca panduan untuk [berkontribusi kami](KONTRIBUSI.md).
