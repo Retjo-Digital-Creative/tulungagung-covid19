@@ -66,10 +66,6 @@ Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG.
     </tr>
 </table>
 
-1. [Defri Indra Mahardika](https://github.com/defrindr)
-2. [M Faruq](https://github.com/mfaruq10) 
-3. [Saddam Azy](https://github.com/saddamazyazy) 
-4. Kamu kah selanjutnya?
 
 ## Instalasi
 ---------------
