@@ -75,7 +75,39 @@ Atau jika kalian menggunakan Laragon atau sejenisnya, kalian bisa membuka langsu
 **1. Konfigurasi Chart**
 Konfigurasi Chart Menggunakan API dari ```/chart``` dan menggunakan javascript pada file ```resources/views/home/landing.blade.php Line 666-734```<br>
 
-Berikut Konfigurasi JavaScriptnya:
+
+Controller API Chart ada di directory /app/Http/Controller/Api/ApiController.php
+
+```php
+    public function chart(){
+		$data = array(
+			'jumlah_positif' => array(), // as array
+			'jumlah_meninggal' => array(), // as array
+			'jumlah_sembuh' => array(), // as array
+			'jumlah_odp' => array(), // as array
+			'jumlah_pdp' => array() // as array
+		);
+		$dates = array(); // as array
+		for($i=6; $i>=0; $i--){ // Looping 7x Untuk mengambil data 7 hari terakhir (array start from 0)
+            $date = date('Y-m-d', strtotime("-{$i} day"));
+            // $temp adalah pernyataan yang dikirim ke database server dan di looping 7x untuk mengambil data 7 hari terakhir
+			$temp = DB::select("SELECT SUM(jumlah_positif) as jumlah_positif, SUM(jumlah_meninggal) as jumlah_meninggal, SUM(jumlah_sembuh) as jumlah_sembuh, SUM(jumlah_odp) as jumlah_odp, SUM(jumlah_pdp) as jumlah_pdp FROM (SELECT * FROM (SELECT * FROM ((SELECT * FROM data_covid_tulungagung as a) UNION ALL (SELECT a.id, a.nama_kecamatan, b.jumlah_positif, b.jumlah_meninggal, b.jumlah_sembuh, b.jumlah_odp, b.jumlah_pdp, b.created_at, b.updated_at from data_histories as b inner join data_covid_tulungagung a on a.id = b.data_id)) tbl where DATE(updated_at) <= '{$date}' order by updated_at desc) tbl GROUP BY id) tbl");
+			if(!empty($temp[0])){
+				$data['jumlah_positif'][] = $temp[0]->jumlah_positif; // mengambil jumlah positif
+				$data['jumlah_meninggal'][] = $temp[0]->jumlah_meninggal; // mengambil jumlah meninggal
+				$data['jumlah_sembuh'][] = $temp[0]->jumlah_sembuh; // mengambil jumlah sembuh
+				$data['jumlah_odp'][] = $temp[0]->jumlah_odp; // mengambil jumlah odp
+				$data['jumlah_pdp'][] = $temp[0]->jumlah_pdp; // mengambil jumlah pdp
+			}
+			$dates[] = $date;
+		}
+		return response()->json([ // memunculkan output ke bentuk json
+			'data' => $data,
+			'date' => $dates
+		])->withHeaders($this->headers);
+    }
+```
+Berikut Konfigurasi JavaScriptnya :
 ```javascript
     <script>
         $(document).ready(function(){
@@ -221,6 +253,16 @@ Berikut adalah Output dari API chartnya :
 
 Api history kasus berada di ```/api```
 <br>
+Controller API Histori Kasus ada di directory /app/Http/Controller/Api/ApiController.php
+
+```php
+    public function getData()
+    {
+    	$data = DataCovid::with('history')->get();
+    	return response()->json($data)->withHeaders($this->headers);
+    }
+```
+
 Output daru API Histori Kasus
 
 ```json
@@ -451,7 +493,7 @@ Output daru API Histori Kasus
     "jumlah_pdp": 5,
     "created_at": "2020-03-29T23:34:26.000000Z",
     "updated_at": "2020-04-11T09:05:52.000000Z",
-    "history": [                  
+    "history": [                   /* HISTORI KASUS */
       {
         "id": 1,
         "data_id": 21,
@@ -471,6 +513,27 @@ Output daru API Histori Kasus
 
 API Kasus Tanpa Histori berada di ```/api/covid```
 <br>
+Controller API Kasus Tanpa Histori ada di directory /app/Http/Controller/Api/CovidController.php
+
+```php
+class CovidController extends Controller
+{
+	public function fetchData(){
+		$data = DataCovid::select(
+			[
+				"nama_kecamatan", //mengambil nama kecamatan
+                "jumlah_odp", // mengambil jumlah odp
+				"jumlah_pdp", // mengambil jumlah pdp
+				"jumlah_positif", // mengambil jumlah positif
+				"jumlah_sembuh", // mengambil jumlah sembuh
+				"jumlah_meninggal", // mengambil jumlah meninggal 
+				DB::raw("jumlah_odp + jumlah_pdp + jumlah_sembuh + jumlah_positif + jumlah_meninggal as jumlah_total") // total
+			])->get();
+		return response()->json($data); //  memunculkan data kedalam bentuk json
+	}
+}
+```
+
 Output API Kasus Tanpa Histori
 
 ```json
@@ -653,6 +716,54 @@ API Kasus Dengan Option tertentu berfungsi untuk mengambil salah satu data conto
 <br>
 API Berada Pada List berikut.
 
+Controller API Kasus Dengan Option Tertentu ada di directory /app/Http/Controller/Api/ApiController.php
+
+```php
+    public function getDataWithQuery($query)
+    {
+    	switch ($query) {
+    		case 'positif':
+    		case 'Positif':
+    			$value = DataCovid::sum('jumlah_positif'); // mengambil jumlah positif
+    			$data['Jumlah Positif'] = $value;
+    			return response()->json($data)->withHeaders($this->headers);
+    			break;
+
+    		case 'sembuh':
+    		case 'Sembuh':
+    			$value = DataCovid::sum('jumlah_sembuh'); // mengambil jumlah sembuh
+    			$data['Jumlah Sembuh'] = $value;
+    			return response()->json($data)->withHeaders($this->headers);
+    			break;
+
+    		case 'meninggal':
+    		case 'Meninggal':
+    			$value = DataCovid::sum('jumlah_meninggal'); // mengambil jumlah meninggal
+    			$data['Jumlah Meninggal'] = $value;
+    			return response()->json($data)->withHeaders($this->headers);
+    			break;
+
+    		case 'odp':
+    		case 'ODP':
+    			$value = DataCovid::sum('jumlah_odp'); // mengambil jumlah odp
+    			$data['Jumlah ODP'] = $value;
+    			return response()->json($data)->withHeaders($this->headers);
+    			break;
+
+    		case 'pdp':
+    		case 'PDP':
+    			$value = DataCovid::sum('jumlah_pdp'); // mengambil jumlah pdp
+    			$data['Jumlah PDP'] = $value;
+    			return response()->json($data)->withHeaders($this->headers);
+    			break;
+    		
+    		default:
+    			return redirect()->route('api.data.get');
+    			break;
+    	}
+    }
+```
+
 API Untuk Mengambil Data Positif : ```/api/query/positif```
 Output :
 
@@ -696,7 +807,8 @@ Kontributor untuk aplikasi SATGAS COVID19 TULUNGAGUNG, terima kasih atas kontrib
 
 1. [Defri Indra Mahardika](https://github.com/defrindr)
 2. [M Faruq](https://github.com/mfaruq10) 
-3. Kamu kah selanjutnya?
+3. [Saddam Azy](https://github.com/saddamazyazy) 
+4. Kamu kah selanjutnya?
 
 ### Kontribusi 
 Kamu ingin menjadi gabungan dari SATGAS SIAGA COVID19 TULUNGAGUNG? Kamu bisa membaca panduan untuk [berkontribusi kami](KONTRIBUSI.md).
