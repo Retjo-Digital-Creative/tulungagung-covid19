@@ -49,6 +49,9 @@
        .navbar {
            z-index: 1500;
        }
+       .header-area {
+           z-index: 1500;
+       }
     </style>
 
     <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
