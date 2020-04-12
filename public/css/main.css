@@ -9247,15 +9247,3 @@ p {
       width: 1179px;
       height: 713px;
   }
-
-  /* styling by faruq */
-.box-primary-shadow{
-box-shadow: 0 5px 10px rgba(94,45,216,.3);
-}
-.img-card{
-
-background:url(https://kawalcorona.com/data/images/svgs/circle.svg);
-background-position: right;
-background-repeat: no-repeat;
-
-}
