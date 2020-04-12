@@ -58,6 +58,9 @@
        .sticky {
            z-index: 99999;
        }
+       .navbar-area{
+           z-index: 99999;
+       }
     </style>
 
     <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
