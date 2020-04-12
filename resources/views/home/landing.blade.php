@@ -52,6 +52,12 @@
        .header-area {
            z-index: 1500;
        }
+       .header {
+           z-index: 1500;
+       }
+       .sticky {
+           z-index: 99999;
+       }
     </style>
 
     <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
