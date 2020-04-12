@@ -47,9 +47,9 @@
     <!--====== Style CSS ======-->
    <style>
        .navbar {
-           z-index: 100;
+           z-index: 1500;
        }
-   </style>
+    </style>
 
     <link rel="stylesheet" href="{{ asset('assets/css/leaflet.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/qgis2web.css') }}">
