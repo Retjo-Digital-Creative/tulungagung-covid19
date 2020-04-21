@@ -81,8 +81,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="{{ asset('/assets/images/logo.png') }}" alt="Logo">
+                            <a class="navbar-brand" href="berita.html">
+                                <img src="{{ asset('/assets/images/logo-2.png') }}" alt="Logo">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
@@ -151,7 +151,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="footer-about mt-50 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <a class="logo" href="#">
-                                <img src="assets/images/logo.png" alt="logo">
+                                <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
                             </a>
                             <p class="text">&#169; 2020 - Dinas Kominfo Kabupaten Tulungagung</p>
                             <ul class="social">
@@ -207,5 +207,5 @@
 
     <script src="{{ asset('assets/js/particles.min.js') }}"></script>
 
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/berita.js') }}"></script>
 </html>
